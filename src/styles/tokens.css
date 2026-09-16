@@ -1,0 +1,31 @@
+:root {
+  --color-paper: #faf7f1;
+  --color-paper-raised: #fffdf8;
+  --color-paper-muted: #f1ece3;
+  --color-ink: #302e2b;
+  --color-ink-muted: #6d6861;
+  --color-rule: #d9d3ca;
+  --color-blush: #ead4d5;
+  --color-sage: #dbe2d5;
+  --color-blue: #dbe5ea;
+  --color-sand: #e9dfd1;
+  --color-olive: #aeb49e;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --content-max-width: 75rem;
+  --page-padding: clamp(1.25rem, 5vw, 4rem);
+  --radius-paper: 0.25rem;
+  --shadow-paper: 0 2px 8px rgb(47 43 38 / 6%);
+  --shadow-photo: 0 4px 14px rgb(47 43 38 / 8%);
+  --font-display: 'Kalam', 'Comic Sans MS', sans-serif;
+  --font-body: 'Inter', Arial, sans-serif;
+  --transition-quick: 200ms;
+}
