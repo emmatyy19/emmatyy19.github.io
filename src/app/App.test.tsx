@@ -27,6 +27,19 @@ describe('App', () => {
     for (const label of ['GitHub', 'LinkedIn', 'Resume']) {
       expect(screen.getAllByRole('link', { name: label })).toHaveLength(1)
     }
+
+    expect(screen.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute(
+      'href',
+      'https://www.linkedin.com/in/emma-t-81bb7917a/',
+    )
+  })
+
+  it('renders the approved portrait', () => {
+    render(<App />)
+
+    expect(
+      screen.getByRole('img', { name: 'Portrait of Emma' }),
+    ).toHaveAttribute('src', expect.stringContaining('emma-portrait'))
   })
 
   it('renders the journey in chronological order', () => {

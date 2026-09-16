@@ -10,7 +10,7 @@ export const professionalLinks = [
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    href: '#replace-linkedin-url',
+    href: 'https://www.linkedin.com/in/emma-t-81bb7917a/',
     external: true,
   },
   {

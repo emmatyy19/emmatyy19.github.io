@@ -1,7 +1,7 @@
 import { ExternalLink } from '../../components/ExternalLink/ExternalLink.tsx'
-import { PhotoPlaceholder } from '../../components/PhotoPlaceholder/PhotoPlaceholder.tsx'
 import { professionalLinks } from '../../content/links.ts'
 import { site } from '../../content/site.ts'
+import portraitUrl from '../../assets/hero/emma-portrait.jpg'
 import styles from './Hero.module.css'
 
 export function Hero() {
@@ -17,7 +17,14 @@ export function Hero() {
       </div>
       <div className={styles.portrait}>
         <span aria-hidden="true" className={styles.tape} />
-        <PhotoPlaceholder label="[HERO_PORTRAIT]" variant="portrait" />
+        <figure className={styles.photoFrame}>
+          <img
+            alt="Portrait of Emma"
+            className={styles.photo}
+            fetchPriority="high"
+            src={portraitUrl}
+          />
+        </figure>
       </div>
     </section>
   )

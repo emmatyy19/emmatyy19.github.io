@@ -54,6 +54,23 @@
   transform: translateX(-50%) rotate(1deg);
 }
 
+.photoFrame {
+  margin: 0;
+  padding: var(--space-3);
+  border: 1px solid color-mix(in srgb, var(--color-rule) 75%, transparent);
+  border-radius: var(--radius-paper);
+  background: var(--color-paper-raised);
+  box-shadow: var(--shadow-photo);
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
 @media (max-width: 48rem) {
   .hero {
     min-height: auto;
