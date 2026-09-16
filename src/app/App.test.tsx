@@ -53,15 +53,23 @@ describe('App', () => {
     expect(cities).toEqual(['Shanghai', 'Cupertino', 'New York City'])
   })
 
-  it('provides a primary and two supporting placeholders per city', () => {
+  it('renders three approved illustrations per city', () => {
     render(<App />)
 
+    const journey = screen.getByRole('region', { name: 'My Journey' })
+
+    expect(within(journey).getAllByRole('img')).toHaveLength(9)
+
     for (const prefix of ['SHANGHAI', 'CUPERTINO', 'NYC']) {
-      expect(screen.getByText(`[${prefix}_PRIMARY]`)).toBeInTheDocument()
-      expect(screen.getByText(`[${prefix}_DETAIL_1]`)).toBeInTheDocument()
-      expect(screen.getByText(`[${prefix}_DETAIL_2]`)).toBeInTheDocument()
+      expect(screen.queryByText(`[${prefix}_PRIMARY]`)).not.toBeInTheDocument()
       expect(screen.getByText(`[${prefix}_CAPTION]`)).toBeInTheDocument()
     }
+
+    expect(
+      within(journey).getByRole('img', {
+        name: 'Painted illustration of a New York avenue in autumn',
+      }),
+    ).toBeInTheDocument()
   })
 
   it('switches between five-image hobby galleries', async () => {
