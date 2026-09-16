@@ -1,4 +1,5 @@
-import { PhotoPlaceholder } from '../../components/PhotoPlaceholder/PhotoPlaceholder.tsx'
+import { JourneyCollage } from '../../components/JourneyCollage/JourneyCollage.tsx'
+import { JourneyConnector } from '../../components/JourneyConnector/JourneyConnector.tsx'
 import { SectionHeading } from '../../components/SectionHeading/SectionHeading.tsx'
 import { journeyEntries } from '../../content/journey.ts'
 import styles from './Journey.module.css'
@@ -17,13 +18,9 @@ export function Journey() {
                 <h3>{entry.city}</h3>
                 <p>{entry.duration}</p>
               </header>
-              <PhotoPlaceholder label={`[${entry.id.toUpperCase()}_PRIMARY]`} />
+              <JourneyCollage entry={entry} />
             </article>
-            {index < journeyEntries.length - 1 ? (
-              <span aria-hidden="true" className={styles.connector}>
-                →
-              </span>
-            ) : null}
+            {index < journeyEntries.length - 1 ? <JourneyConnector /> : null}
           </div>
         ))}
       </div>

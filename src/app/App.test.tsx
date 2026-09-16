@@ -38,4 +38,15 @@ describe('App', () => {
 
     expect(cities).toEqual(['Shanghai', 'Cupertino', 'New York City'])
   })
+
+  it('provides a primary and two supporting placeholders per city', () => {
+    render(<App />)
+
+    for (const prefix of ['SHANGHAI', 'CUPERTINO', 'NYC']) {
+      expect(screen.getByText(`[${prefix}_PRIMARY]`)).toBeInTheDocument()
+      expect(screen.getByText(`[${prefix}_DETAIL_1]`)).toBeInTheDocument()
+      expect(screen.getByText(`[${prefix}_DETAIL_2]`)).toBeInTheDocument()
+      expect(screen.getByText(`[${prefix}_CAPTION]`)).toBeInTheDocument()
+    }
+  })
 })
