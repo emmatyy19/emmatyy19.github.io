@@ -1,5 +1,9 @@
 .page {
   width: min(100% - (2 * var(--page-padding)), var(--content-max-width));
   margin-inline: auto;
-  padding-block: var(--space-8);
+}
+
+.main {
+  display: grid;
+  gap: var(--section-gap);
 }

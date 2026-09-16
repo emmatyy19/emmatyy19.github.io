@@ -1,0 +1,67 @@
+.hero {
+  display: grid;
+  min-height: 28rem;
+  align-items: center;
+  gap: clamp(var(--space-7), 9vw, var(--space-10));
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.72fr);
+}
+
+.copy {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.copy > p {
+  max-width: 29rem;
+  font-family: var(--font-display);
+  font-size: var(--text-intro);
+  line-height: 1.45;
+}
+
+.copy > p::after {
+  display: block;
+  width: min(19rem, 75%);
+  height: 0.35rem;
+  margin-block-start: var(--space-3);
+  border-radius: 50%;
+  background: var(--color-blush);
+  content: '';
+  opacity: 0.75;
+  transform: rotate(-1deg);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4) var(--space-6);
+}
+
+.portrait {
+  position: relative;
+  max-width: 22rem;
+  justify-self: end;
+  transform: rotate(-1.25deg);
+}
+
+.tape {
+  position: absolute;
+  z-index: 1;
+  top: -0.8rem;
+  left: 50%;
+  width: 7rem;
+  height: 1.65rem;
+  background: color-mix(in srgb, var(--color-blush) 78%, transparent);
+  transform: translateX(-50%) rotate(1deg);
+}
+
+@media (max-width: 48rem) {
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .portrait {
+    width: min(100%, 20rem);
+    justify-self: center;
+  }
+}
