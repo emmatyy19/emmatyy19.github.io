@@ -48,6 +48,31 @@
   display: none;
 }
 
+.imageFrame {
+  width: 100%;
+  margin: 0;
+  padding: var(--space-2);
+  border: 1px solid color-mix(in srgb, var(--color-rule) 75%, transparent);
+  border-radius: var(--radius-paper);
+  background: var(--color-paper-raised);
+  box-shadow: var(--shadow-photo);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.imageFrame[data-variant='portrait'] .image {
+  aspect-ratio: 4 / 5;
+}
+
+.imageFrame[data-variant='square'] .image {
+  aspect-ratio: 1;
+}
+
 .wash {
   position: absolute;
   z-index: -1;

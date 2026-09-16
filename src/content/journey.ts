@@ -1,3 +1,12 @@
+import shanghaiSkylineUrl from '../assets/journey/shanghai/skyline.jpg'
+import shanghaiYuGardenUrl from '../assets/journey/shanghai/yu-garden.jpg'
+import shanghaiXiaolongbaoUrl from '../assets/journey/shanghai/xiaolongbao.jpg'
+import cupertinoAlpacaUrl from '../assets/journey/cupertino/alpaca.jpg'
+import cupertinoAppleParkUrl from '../assets/journey/cupertino/apple-park.jpg'
+import cupertinoMatadorUrl from '../assets/journey/cupertino/matador.jpg'
+import newYorkAutumnAvenueUrl from '../assets/journey/new-york/autumn-avenue.jpg'
+import newYorkSharedMealUrl from '../assets/journey/new-york/shared-meal.jpg'
+import newYorkWashingtonSquareUrl from '../assets/journey/new-york/washington-square.jpg'
 import type { JourneyEntry } from '../types/content.ts'
 
 export const journeyEntries = [
@@ -7,6 +16,12 @@ export const journeyEntries = [
     duration: '11 years',
     order: 1,
     caption: '[SHANGHAI_CAPTION]',
+    primaryImage: {
+      id: 'shanghai-skyline',
+      src: shanghaiSkylineUrl,
+      alt: 'Painted illustration of the Shanghai skyline across the river',
+      orientation: 'landscape',
+    },
     primaryPlaceholder: {
       id: 'shanghai-primary',
       label: '[SHANGHAI_PRIMARY]',
@@ -24,7 +39,20 @@ export const journeyEntries = [
         orientation: 'square',
       },
     ],
-    supportingImages: [],
+    supportingImages: [
+      {
+        id: 'shanghai-yu-garden',
+        src: shanghaiYuGardenUrl,
+        alt: 'Painted aerial illustration of Yu Garden in Shanghai',
+        orientation: 'landscape',
+      },
+      {
+        id: 'shanghai-xiaolongbao',
+        src: shanghaiXiaolongbaoUrl,
+        alt: 'Painted illustration of xiaolongbao in a bamboo steamer',
+        orientation: 'landscape',
+      },
+    ],
   },
   {
     id: 'cupertino',
@@ -32,6 +60,12 @@ export const journeyEntries = [
     duration: '7 years',
     order: 2,
     caption: '[CUPERTINO_CAPTION]',
+    primaryImage: {
+      id: 'cupertino-apple-park',
+      src: cupertinoAppleParkUrl,
+      alt: 'Painted aerial illustration of Apple Park in Cupertino',
+      orientation: 'landscape',
+    },
     primaryPlaceholder: {
       id: 'cupertino-primary',
       label: '[CUPERTINO_PRIMARY]',
@@ -49,7 +83,20 @@ export const journeyEntries = [
         orientation: 'portrait',
       },
     ],
-    supportingImages: [],
+    supportingImages: [
+      {
+        id: 'cupertino-matador',
+        src: cupertinoMatadorUrl,
+        alt: 'Purple and gold painted matador mascot illustration',
+        orientation: 'landscape',
+      },
+      {
+        id: 'cupertino-alpaca',
+        src: cupertinoAlpacaUrl,
+        alt: 'Painted illustration of a white alpaca at a farm',
+        orientation: 'landscape',
+      },
+    ],
   },
   {
     id: 'new-york',
@@ -57,6 +104,12 @@ export const journeyEntries = [
     duration: '9 years',
     order: 3,
     caption: '[NYC_CAPTION]',
+    primaryImage: {
+      id: 'new-york-autumn-avenue',
+      src: newYorkAutumnAvenueUrl,
+      alt: 'Painted illustration of a New York avenue in autumn',
+      orientation: 'landscape',
+    },
     primaryPlaceholder: {
       id: 'nyc-primary',
       label: '[NYC_PRIMARY]',
@@ -74,6 +127,19 @@ export const journeyEntries = [
         orientation: 'square',
       },
     ],
-    supportingImages: [],
+    supportingImages: [
+      {
+        id: 'new-york-washington-square',
+        src: newYorkWashingtonSquareUrl,
+        alt: 'Painted illustration of the Washington Square Arch',
+        orientation: 'landscape',
+      },
+      {
+        id: 'new-york-shared-meal',
+        src: newYorkSharedMealUrl,
+        alt: 'Painted illustration of a shared meal around a tabletop grill',
+        orientation: 'landscape',
+      },
+    ],
   },
 ] satisfies readonly JourneyEntry[]
