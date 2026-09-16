@@ -15,6 +15,12 @@ export type ImageAsset = Readonly<{
 
 export type JourneyId = 'shanghai' | 'cupertino' | 'new-york'
 
+export type ImagePlaceholder = Readonly<{
+  id: string
+  label: string
+  orientation: 'landscape' | 'portrait' | 'square'
+}>
+
 export type JourneyEntry = Readonly<{
   id: JourneyId
   city: string
@@ -23,6 +29,8 @@ export type JourneyEntry = Readonly<{
   caption?: string
   primaryImage?: ImageAsset
   supportingImages: readonly ImageAsset[]
+  primaryPlaceholder: ImagePlaceholder
+  supportingPlaceholders: readonly ImagePlaceholder[]
   sketch?: string
 }>
 
