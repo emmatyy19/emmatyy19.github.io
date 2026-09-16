@@ -16,6 +16,10 @@ updates:
       - dependency-name: '*'
         update-types:
           - version-update:semver-major
+      # Vite's React plugin currently requires the 0.145.x compiler line.
+      - dependency-name: oxc-transform-react
+        versions:
+          - '>=0.146.0'
   - package-ecosystem: github-actions
     directory: /
     schedule:
