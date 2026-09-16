@@ -1,5 +1,5 @@
 import { SectionHeading } from '../../components/SectionHeading/SectionHeading.tsx'
-import { hobbyGalleries } from '../../content/elsewhere.ts'
+import { BinderTabs } from './BinderTabs.tsx'
 import styles from './Elsewhere.module.css'
 
 export function Elsewhere() {
@@ -11,18 +11,7 @@ export function Elsewhere() {
         </SectionHeading>
         <p>[ELSEWHERE_INTRO]</p>
       </div>
-      <div className={styles.binder}>
-        <div aria-label="Hobby gallery categories" className={styles.tabs}>
-          {hobbyGalleries.map((gallery) => (
-            <span className={styles.tab} key={gallery.id}>
-              {gallery.label}
-            </span>
-          ))}
-        </div>
-        <div className={styles.sheet}>
-          <p>[ACCESSIBLE_BINDER_GALLERY_COMING_NEXT]</p>
-        </div>
-      </div>
+      <BinderTabs />
     </section>
   )
 }

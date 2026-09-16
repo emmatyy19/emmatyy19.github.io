@@ -15,6 +15,15 @@ test('homepage loads', async ({ page }) => {
     await expect(page.getByRole('heading', { name: city })).toBeVisible()
   }
 
+  const golfTab = page.getByRole('tab', { name: 'Golf' })
+  const crochetTab = page.getByRole('tab', { name: 'Crochet' })
+
+  await expect(golfTab).toHaveAttribute('aria-selected', 'true')
+  await crochetTab.click()
+  await expect(crochetTab).toHaveAttribute('aria-selected', 'true')
+  await expect(page.getByText('[CROCHET_IMAGE_1]')).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Resume' })).toBeVisible()
+
   const accessibilityScan = await new AxeBuilder({ page }).analyze()
   expect(accessibilityScan.violations).toEqual([])
 })

@@ -40,4 +40,5 @@ export type HobbyGallery = Readonly<{
   id: HobbyId
   label: string
   images: readonly ImageAsset[]
+  placeholders: readonly ImagePlaceholder[]
 }>

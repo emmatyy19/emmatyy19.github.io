@@ -56,9 +56,9 @@ npm run test:e2e
 
 ## Project status
 
-The repository and site foundations are complete. The page now has its typed content layer, semantic section structure, responsive editorial layout, design tokens, and self-hosted typography. Detailed Journey artwork, the interactive hobby binder, final copy, personal photography, résumé, and social URLs will be added separately.
+The site foundation, Journey compositions, and interactive hobby binder are complete. The binder uses an accessible tab pattern with click and keyboard activation, while both hobby galleries retain explicit five-image placeholders until final photography is approved. Final copy, personal photography, résumé, and social URLs will be added separately.
 
-This repository is local-only for now. The deployment workflow is prepared but nothing has been published and no Git remote is configured.
+Progress is recorded in a private GitHub repository. The deployment workflow is prepared, but GitHub Pages remains paused and nothing has been published.
 
 ```mermaid
 flowchart LR
