@@ -1,26 +1,48 @@
 :root {
-  font-family: var(--font-body);
   color: var(--color-ink);
   background: var(--color-paper);
+  font-family: var(--font-body);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+}
+
+html {
+  background: var(--color-paper);
+  scroll-behavior: smooth;
 }
 
 body {
   min-width: 20rem;
   min-height: 100vh;
-  background: var(--color-paper);
+  background:
+    radial-gradient(circle at 18% 24%, rgb(255 255 255 / 35%), transparent 28%),
+    radial-gradient(circle at 82% 66%, rgb(233 223 209 / 20%), transparent 32%),
+    var(--color-paper);
+  color: var(--color-ink);
+  line-height: 1.6;
 }
 
-h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 2.375rem);
-  font-weight: 400;
-  line-height: 1.1;
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    8deg,
+    transparent 0,
+    transparent 3px,
+    rgb(48 46 43 / 1.2%) 4px
+  );
+  content: '';
+  opacity: 0.45;
+  pointer-events: none;
 }
 
 a {
   color: inherit;
+}
+
+::selection {
+  background: var(--color-blush);
 }
 
 :focus-visible {
@@ -29,10 +51,13 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
-    scroll-behavior: auto;
     transition-duration: 0.01ms;
     animation-duration: 0.01ms;
     animation-iteration-count: 1;

@@ -56,7 +56,7 @@ npm run test:e2e
 
 ## Project status
 
-The repository foundation is complete. The UI currently contains a minimal placeholder shell; final copy, personal photography, résumé, social links, and visual implementation will be added separately.
+The repository and site foundations are complete. The page now has its typed content layer, semantic section structure, responsive editorial layout, design tokens, and self-hosted typography. Detailed Journey artwork, the interactive hobby binder, final copy, personal photography, résumé, and social URLs will be added separately.
 
 This repository is local-only for now. The deployment workflow is prepared but nothing has been published and no Git remote is configured.
 

@@ -1,0 +1,42 @@
+.about {
+  display: grid;
+  align-items: center;
+  gap: var(--space-7);
+  grid-template-columns: 0.55fr minmax(0, 1.4fr) minmax(10rem, 0.75fr);
+}
+
+.about > p {
+  max-width: 38rem;
+  padding-inline-start: var(--space-7);
+  border-inline-start: 1px solid var(--color-rule-strong);
+  color: var(--color-ink-muted);
+  font-size: var(--text-body-large);
+  line-height: 1.8;
+}
+
+.sketch {
+  display: grid;
+  min-height: 9rem;
+  place-items: center;
+  border-block-end: 1px solid var(--color-rule);
+  color: var(--color-ink-soft);
+  font-family: var(--font-display);
+  font-size: var(--text-annotation);
+}
+
+@media (max-width: 48rem) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about > p {
+    padding-block-start: var(--space-5);
+    padding-inline-start: 0;
+    border-block-start: 1px solid var(--color-rule-strong);
+    border-inline-start: 0;
+  }
+
+  .sketch {
+    display: none;
+  }
+}

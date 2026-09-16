@@ -1,0 +1,11 @@
+.header {
+  padding-block: clamp(var(--space-7), 7vw, var(--space-9)) var(--space-7);
+}
+
+.header h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-site-name);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}

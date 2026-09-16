@@ -1,14 +1,22 @@
+import { About } from '../sections/About/About.tsx'
+import { Elsewhere } from '../sections/Elsewhere/Elsewhere.tsx'
+import { Footer } from '../sections/Footer/Footer.tsx'
+import { Header } from '../sections/Header/Header.tsx'
+import { Hero } from '../sections/Hero/Hero.tsx'
+import { Journey } from '../sections/Journey/Journey.tsx'
 import styles from './App.module.css'
 
 export function App() {
   return (
     <div className={styles.page}>
-      <header>
-        <h1>Emma Tong</h1>
-      </header>
-      <main aria-label="Personal website content">
-        <p>[SITE_CONTENT_COMING_NEXT]</p>
+      <Header />
+      <main className={styles.main}>
+        <Hero />
+        <About />
+        <Journey />
+        <Elsewhere />
       </main>
+      <Footer />
     </div>
   )
 }
