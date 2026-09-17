@@ -35,6 +35,10 @@ describe('App', () => {
       'href',
       'https://www.linkedin.com/in/emma-t-81bb7917a/',
     )
+    expect(screen.getByRole('link', { name: 'GitHub' })).toHaveAttribute(
+      'href',
+      'https://github.com/emmatyy19?tab=repositories',
+    )
     expect(screen.getByRole('link', { name: 'Resume' })).toHaveAttribute(
       'href',
       '/documents/emma-resume.pdf',
@@ -62,6 +66,30 @@ describe('App', () => {
       .map((heading) => heading.textContent)
 
     expect(cities).toEqual(['Shanghai', 'Cupertino', 'New York City'])
+    expect(
+      within(journey).getByText('where family, food, and home began'),
+    ).toBeInTheDocument()
+    expect(
+      within(journey).getByText('where curiosity grew into craft'),
+    ).toBeInTheDocument()
+    expect(
+      within(journey).getByText('where finance met software and AI'),
+    ).toBeInTheDocument()
+  })
+
+  it('renders the approved personal copy without visible placeholders', () => {
+    render(<App />)
+
+    expect(
+      screen.getByText(/I build thoughtful AI systems/),
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText(/software engineer working across AI, data/),
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText(/I trade code for golf courses and yarn/),
+    ).toBeInTheDocument()
+    expect(screen.queryByText(/^\[[A-Z_]+\]$/)).not.toBeInTheDocument()
   })
 
   it('renders three approved illustrations per city', () => {
@@ -73,7 +101,7 @@ describe('App', () => {
 
     for (const prefix of ['SHANGHAI', 'CUPERTINO', 'NYC']) {
       expect(screen.queryByText(`[${prefix}_PRIMARY]`)).not.toBeInTheDocument()
-      expect(screen.getByText(`[${prefix}_CAPTION]`)).toBeInTheDocument()
+      expect(screen.queryByText(`[${prefix}_CAPTION]`)).not.toBeInTheDocument()
     }
 
     expect(

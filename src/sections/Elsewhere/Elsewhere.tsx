@@ -9,7 +9,10 @@ export function Elsewhere() {
         <SectionHeading accent="blue" id="elsewhere-heading">
           Elsewhere
         </SectionHeading>
-        <p>[ELSEWHERE_INTRO]</p>
+        <p>
+          Off-screen, I trade code for golf courses and yarn—two slower crafts
+          that reward patience, repetition, and a little play.
+        </p>
       </div>
       <BinderTabs />
     </section>

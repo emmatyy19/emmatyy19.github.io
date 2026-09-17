@@ -15,7 +15,7 @@ export const journeyEntries = [
     city: 'Shanghai',
     duration: '11 years',
     order: 1,
-    caption: '[SHANGHAI_CAPTION]',
+    caption: 'where family, food, and home began',
     primaryImage: {
       id: 'shanghai-skyline',
       src: shanghaiSkylineUrl,
@@ -59,7 +59,7 @@ export const journeyEntries = [
     city: 'Cupertino',
     duration: '7 years',
     order: 2,
-    caption: '[CUPERTINO_CAPTION]',
+    caption: 'where curiosity grew into craft',
     primaryImage: {
       id: 'cupertino-apple-park',
       src: cupertinoAppleParkUrl,
@@ -103,7 +103,7 @@ export const journeyEntries = [
     city: 'New York City',
     duration: '9 years',
     order: 3,
-    caption: '[NYC_CAPTION]',
+    caption: 'where finance met software and AI',
     primaryImage: {
       id: 'new-york-autumn-avenue',
       src: newYorkAutumnAvenueUrl,
