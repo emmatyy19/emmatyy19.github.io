@@ -57,7 +57,7 @@ npm run test:e2e
 
 ## Project status
 
-The site foundation, Journey compositions, Education artwork, résumé download, and interactive hobby binder are complete. The binder uses an accessible tab pattern with click and keyboard activation, while both hobby galleries retain explicit five-image placeholders until final photography is approved. Final copy, hobby photography, and the remaining social URL will be added separately. The résumé file is intentionally replaceable as Emma revises it.
+The site foundation, Journey compositions, Education artwork, résumé download, and interactive hobby binder are complete. The binder uses an accessible tab pattern with click and keyboard activation. The Golf gallery now uses five approved, web-optimized photographs, while Crochet retains explicit placeholders until its photography is approved. Final copy, Crochet photography, and the remaining social URL will be added separately. The résumé file is intentionally replaceable as Emma revises it.
 
 Progress is recorded in a private GitHub repository. The deployment workflow is prepared, but GitHub Pages remains paused and nothing has been published.
 
