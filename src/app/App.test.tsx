@@ -109,7 +109,13 @@ describe('App', () => {
 
     expect(golfTab).toHaveAttribute('aria-selected', 'true')
     expect(crochetTab).toHaveAttribute('aria-selected', 'false')
-    expect(screen.getAllByText(/\[GOLF_IMAGE_\d\]/)).toHaveLength(5)
+    expect(
+      screen.getByRole('img', {
+        name: 'Emma finishing a golf swing on a coastal course',
+      }),
+    ).toBeInTheDocument()
+    expect(screen.getAllByRole('img')).toHaveLength(17)
+    expect(screen.queryByText('[GOLF_IMAGE_1]')).not.toBeInTheDocument()
     expect(screen.queryByText('[CROCHET_IMAGE_1]')).not.toBeInTheDocument()
 
     await user.click(crochetTab)

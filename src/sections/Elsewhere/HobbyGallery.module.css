@@ -10,6 +10,36 @@
   min-width: 0;
 }
 
+.photo {
+  width: 100%;
+  margin: 0;
+  padding: var(--space-2);
+  border: 1px solid color-mix(in srgb, var(--color-rule) 75%, transparent);
+  border-radius: var(--radius-paper);
+  background: var(--color-paper-raised);
+  box-shadow: var(--shadow-photo);
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: calc(var(--radius-paper) / 2);
+  object-fit: cover;
+}
+
+.photo[data-variant='square'] img {
+  aspect-ratio: 1;
+}
+
+.photo[data-variant='portrait'] img {
+  aspect-ratio: 9 / 16;
+}
+
+.photo[data-image='rainbow-round'] img {
+  object-position: center 50%;
+}
+
 .gallery[data-hobby='golf'] .item:nth-child(1) {
   grid-column: 1 / 6;
 }
@@ -78,7 +108,7 @@
 
   .gallery[data-hobby='golf'] .item:nth-child(5),
   .gallery[data-hobby='crochet'] .item:nth-child(5) {
-    width: 65%;
+    width: min(75%, 18rem);
     grid-column: 1 / -1;
     justify-self: center;
   }
