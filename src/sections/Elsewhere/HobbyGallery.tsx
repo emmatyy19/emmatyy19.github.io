@@ -17,9 +17,24 @@ export function HobbyGallery({ gallery }: HobbyGalleryProps) {
               <figure
                 className={styles.photo}
                 data-image={image.id}
+                data-paired={image.secondary ? 'true' : undefined}
                 data-variant={image.orientation ?? 'landscape'}
               >
-                <img alt={image.alt} loading="lazy" src={image.src} />
+                <div className={styles.photoSequence}>
+                  <img alt={image.alt} loading="lazy" src={image.src} />
+                  {image.secondary ? (
+                    <>
+                      <span aria-hidden="true" className={styles.sequenceMark}>
+                        →
+                      </span>
+                      <img
+                        alt={image.secondary.alt}
+                        loading="lazy"
+                        src={image.secondary.src}
+                      />
+                    </>
+                  ) : null}
+                </div>
               </figure>
             </div>
           ))
