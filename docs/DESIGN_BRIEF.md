@@ -18,7 +18,10 @@ flowchart TB
     Journey --> Shanghai[Shanghai · 11 years]
     Shanghai --> Cupertino[Cupertino · 7 years]
     Cupertino --> NYC[New York City · 9 years]
-    NYC --> Elsewhere[Elsewhere]
+    NYC --> Education[Education]
+    Education --> NYU[NYU Stern]
+    NYU --> Columbia[Columbia University]
+    Columbia --> Elsewhere[Elsewhere]
     Elsewhere --> Golf[Golf]
     Elsewhere --> Crochet[Crochet]
     Golf --> Footer[Minimal footer]
@@ -38,6 +41,7 @@ There is no top navigation, projects grid, blog, contact form, router, or dark m
 - Chronological three-city journey with hand-drawn connectors
 - Layered photo and illustration compositions instead of generic cards
 - Binder-style Golf and Crochet tabs
+- Open sketchbook-style Education spread with school-color line drawings
 - Muted blush, sage, blue, sand, and olive accents
 - Fine rules, light shadows, and slightly imperfect rotations
 

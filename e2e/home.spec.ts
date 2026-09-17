@@ -9,6 +9,7 @@ test('homepage loads', async ({ page }) => {
   ).toBeVisible()
   await expect(page.getByRole('heading', { name: 'About' })).toBeVisible()
   await expect(page.getByRole('heading', { name: 'My Journey' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Education' })).toBeVisible()
   await expect(page.getByRole('heading', { name: 'Elsewhere' })).toBeVisible()
 
   for (const city of ['Shanghai', 'Cupertino', 'New York City']) {

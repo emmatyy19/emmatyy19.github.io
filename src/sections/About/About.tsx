@@ -7,9 +7,6 @@ export function About() {
     <section aria-labelledby="about-heading" className={styles.about}>
       <SectionHeading id="about-heading">About</SectionHeading>
       <p>{aboutCopy}</p>
-      <div aria-hidden="true" className={styles.sketch}>
-        <span>[ACADEMIC_SKETCH]</span>
-      </div>
     </section>
   )
 }
