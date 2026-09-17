@@ -9,13 +9,14 @@ export function ExternalLink({ link }: ExternalLinkProps) {
   return (
     <a
       className={styles.link}
+      download={link.download}
       href={link.href}
       {...(link.external
         ? { rel: 'noopener noreferrer', target: '_blank' }
         : {})}
     >
       {link.label}
-      <span aria-hidden="true">↗</span>
+      <span aria-hidden="true">{link.download ? '↓' : '↗'}</span>
     </a>
   )
 }
