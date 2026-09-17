@@ -10,6 +10,10 @@ export type ImageAsset = Readonly<{
   id: string
   src: string
   alt: string
+  secondary?: Readonly<{
+    src: string
+    alt: string
+  }>
   caption?: string
   orientation?: 'landscape' | 'portrait' | 'square'
 }>

@@ -1,4 +1,11 @@
 import type { HobbyGallery } from '../types/content.ts'
+import bananaCatUrl from '../assets/elsewhere/crochet/banana-cat.webp'
+import eggKeyCoverBackUrl from '../assets/elsewhere/crochet/egg-key-cover-back.webp'
+import eggKeyCoverFrontUrl from '../assets/elsewhere/crochet/egg-key-cover-front.webp'
+import lionPlushUrl from '../assets/elsewhere/crochet/lion-plush.webp'
+import tulipBouquetUrl from '../assets/elsewhere/crochet/tulip-bouquet.webp'
+import tulipMatUrl from '../assets/elsewhere/crochet/tulip-mat.webp'
+import wreathOrnamentUrl from '../assets/elsewhere/crochet/wreath-ornament.webp'
 import oceanDriveUrl from '../assets/elsewhere/golf/ocean-drive.webp'
 import practiceSwingUrl from '../assets/elsewhere/golf/practice-swing.webp'
 import psyduckCaddieUrl from '../assets/elsewhere/golf/psyduck-caddie.webp'
@@ -52,7 +59,46 @@ export const hobbyGalleries = [
   {
     id: 'crochet',
     label: 'Crochet',
-    images: [],
+    images: [
+      {
+        id: 'wreath-ornament',
+        src: wreathOrnamentUrl,
+        alt: 'A crocheted red and green wreath ornament with a bow',
+        orientation: 'portrait',
+      },
+      {
+        id: 'banana-cat',
+        src: bananaCatUrl,
+        alt: 'A small crocheted cat hugging a banana',
+        orientation: 'landscape',
+      },
+      {
+        id: 'tulip-bouquet',
+        src: tulipMatUrl,
+        alt: 'A flat crocheted circle edged with purple tulips',
+        secondary: {
+          src: tulipBouquetUrl,
+          alt: 'The same crochet piece gathered into a bouquet of purple tulips',
+        },
+        orientation: 'square',
+      },
+      {
+        id: 'egg-key-cover',
+        src: eggKeyCoverFrontUrl,
+        alt: 'Front view of a crocheted fried-egg cover on a key',
+        secondary: {
+          src: eggKeyCoverBackUrl,
+          alt: 'Reverse view of the same crocheted fried-egg key cover',
+        },
+        orientation: 'landscape',
+      },
+      {
+        id: 'lion-plush',
+        src: lionPlushUrl,
+        alt: 'A small golden crocheted lion plush',
+        orientation: 'square',
+      },
+    ],
     placeholders: [
       { id: 'crochet-1', label: '[CROCHET_IMAGE_1]', orientation: 'portrait' },
       { id: 'crochet-2', label: '[CROCHET_IMAGE_2]', orientation: 'landscape' },

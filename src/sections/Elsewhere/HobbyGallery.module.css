@@ -28,6 +28,23 @@
   object-fit: cover;
 }
 
+.photo[data-paired='true'] .photoSequence {
+  display: grid;
+  align-items: center;
+  gap: clamp(0.15rem, 0.5vw, 0.5rem);
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+}
+
+.photo[data-paired='true'] img {
+  aspect-ratio: 3 / 4;
+}
+
+.sequenceMark {
+  color: var(--color-olive);
+  font-family: var(--font-display);
+  font-size: clamp(0.85rem, 1.5vw, 1.25rem);
+}
+
 .photo[data-variant='square'] img {
   aspect-ratio: 1;
 }

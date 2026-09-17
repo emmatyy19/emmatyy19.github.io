@@ -22,7 +22,11 @@ test('homepage loads', async ({ page }) => {
   await expect(golfTab).toHaveAttribute('aria-selected', 'true')
   await crochetTab.click()
   await expect(crochetTab).toHaveAttribute('aria-selected', 'true')
-  await expect(page.getByText('[CROCHET_IMAGE_1]')).toBeVisible()
+  await expect(
+    page.getByRole('img', {
+      name: 'The same crochet piece gathered into a bouquet of purple tulips',
+    }),
+  ).toBeVisible()
   await expect(page.getByRole('link', { name: 'Resume' })).toBeVisible()
 
   const accessibilityScan = await new AxeBuilder({ page }).analyze()

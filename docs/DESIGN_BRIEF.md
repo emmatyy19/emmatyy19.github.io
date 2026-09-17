@@ -41,6 +41,7 @@ There is no top navigation, projects grid, blog, contact form, router, or dark m
 - Chronological three-city journey with hand-drawn connectors
 - Layered photo and illustration compositions instead of generic cards
 - Binder-style Golf and Crochet tabs
+- Paired Crochet frames that reveal transformation and use without adding extra cards
 - Open sketchbook-style Education spread with school-color line drawings
 - Muted blush, sage, blue, sand, and olive accents
 - Fine rules, light shadows, and slightly imperfect rotations
@@ -52,7 +53,7 @@ There is no top navigation, projects grid, blog, contact form, router, or dark m
 - The browser URL shown in the image is illustrative. GitHub Pages can use its free URL, and a custom domain remains optional.
 - The mockup is a fixed desktop composition. Tablet and mobile layouts should simplify secondary decoration before reducing readability or touch-target size.
 - Captions and personal statements visible in the concept are directional examples, not approved final copy.
-- The generated portrait and city/hobby imagery are composition references, not final personal assets.
+- Approved personal portrait and hobby photography replace the original composition placeholders; generated city illustrations remain part of the final art direction.
 
 ## Visual system
 

@@ -121,7 +121,17 @@ describe('App', () => {
     await user.click(crochetTab)
 
     expect(crochetTab).toHaveAttribute('aria-selected', 'true')
-    expect(screen.getAllByText(/\[CROCHET_IMAGE_\d\]/)).toHaveLength(5)
+    expect(
+      screen.getByRole('img', {
+        name: 'A flat crocheted circle edged with purple tulips',
+      }),
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole('img', {
+        name: 'The same crochet piece gathered into a bouquet of purple tulips',
+      }),
+    ).toBeInTheDocument()
+    expect(screen.queryByText('[CROCHET_IMAGE_1]')).not.toBeInTheDocument()
     expect(screen.queryByText('[GOLF_IMAGE_1]')).not.toBeInTheDocument()
   })
 
