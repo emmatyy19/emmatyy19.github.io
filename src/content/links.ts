@@ -16,7 +16,8 @@ export const professionalLinks = [
   {
     id: 'resume',
     label: 'Resume',
-    href: '#replace-resume-url',
+    href: '/documents/emma-resume.pdf',
     external: false,
+    download: 'Emma-Resume.pdf',
   },
 ] satisfies readonly ProfessionalLink[]

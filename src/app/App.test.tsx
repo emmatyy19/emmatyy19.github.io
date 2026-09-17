@@ -35,6 +35,14 @@ describe('App', () => {
       'href',
       'https://www.linkedin.com/in/emma-t-81bb7917a/',
     )
+    expect(screen.getByRole('link', { name: 'Resume' })).toHaveAttribute(
+      'href',
+      '/documents/emma-resume.pdf',
+    )
+    expect(screen.getByRole('link', { name: 'Resume' })).toHaveAttribute(
+      'download',
+      'Emma-Resume.pdf',
+    )
   })
 
   it('renders the approved portrait', () => {

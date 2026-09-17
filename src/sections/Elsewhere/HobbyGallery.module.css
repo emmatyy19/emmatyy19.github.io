@@ -59,7 +59,6 @@
 
 @keyframes reveal {
   from {
-    opacity: 0;
     transform: translateY(var(--space-2));
   }
 }

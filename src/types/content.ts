@@ -3,6 +3,7 @@ export type ProfessionalLink = Readonly<{
   label: string
   href: string
   external: boolean
+  download?: string
 }>
 
 export type ImageAsset = Readonly<{
