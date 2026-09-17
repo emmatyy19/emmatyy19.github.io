@@ -19,6 +19,9 @@ describe('App', () => {
     expect(
       screen.getByRole('heading', { level: 2, name: 'Elsewhere' }),
     ).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { level: 2, name: 'Education' }),
+    ).toBeInTheDocument()
   })
 
   it('renders the professional links exactly once', () => {
@@ -70,6 +73,23 @@ describe('App', () => {
         name: 'Painted illustration of a New York avenue in autumn',
       }),
     ).toBeInTheDocument()
+  })
+
+  it('renders the education journey in chronological order', () => {
+    render(<App />)
+
+    const education = screen.getByRole('region', { name: 'Education' })
+    const institutions = within(education)
+      .getAllByRole('heading', { level: 3 })
+      .map((heading) => heading.textContent)
+
+    expect(institutions).toEqual(['NYU Stern', 'Columbia University'])
+    expect(within(education).getByText('B.S. in Business')).toBeInTheDocument()
+    expect(
+      within(education).getByText('M.S. in Computer Science'),
+    ).toBeInTheDocument()
+    expect(within(education).getByText('Expected 2027')).toBeInTheDocument()
+    expect(screen.queryByText('[ACADEMIC_SKETCH]')).not.toBeInTheDocument()
   })
 
   it('switches between five-image hobby galleries', async () => {

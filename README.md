@@ -7,6 +7,7 @@ The site is designed as one continuous page:
 - Intro
 - About
 - My Journey: Shanghai → Cupertino → New York City
+- Education: NYU Stern → Columbia University
 - Elsewhere: Golf and Crochet
 - Footer
 
@@ -56,7 +57,7 @@ npm run test:e2e
 
 ## Project status
 
-The site foundation, Journey compositions, and interactive hobby binder are complete. The binder uses an accessible tab pattern with click and keyboard activation, while both hobby galleries retain explicit five-image placeholders until final photography is approved. Final copy, personal photography, résumé, and social URLs will be added separately.
+The site foundation, Journey compositions, Education artwork, and interactive hobby binder are complete. The binder uses an accessible tab pattern with click and keyboard activation, while both hobby galleries retain explicit five-image placeholders until final photography is approved. Final copy, hobby photography, résumé, and remaining social URLs will be added separately.
 
 Progress is recorded in a private GitHub repository. The deployment workflow is prepared, but GitHub Pages remains paused and nothing has been published.
 

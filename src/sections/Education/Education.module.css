@@ -1,0 +1,132 @@
+.section {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.path {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.step {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.step:last-child {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.entry {
+  --school-ink: #654277;
+  --school-wash: color-mix(in srgb, var(--color-blush) 48%, transparent);
+  display: grid;
+  min-width: 0;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.entry[data-school='columbia'] {
+  --school-ink: #477b9f;
+  --school-wash: color-mix(in srgb, var(--color-blue) 70%, transparent);
+}
+
+.entry h3 {
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+  color: var(--school-ink);
+  font-family: var(--font-display);
+  font-size: var(--text-city);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.entry h3::after {
+  position: absolute;
+  z-index: -1;
+  right: -0.35rem;
+  bottom: -0.05rem;
+  left: -0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--school-wash);
+  content: '';
+  transform: rotate(-1deg);
+}
+
+.sketch {
+  margin: 0;
+}
+
+.sketch img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  mix-blend-mode: multiply;
+  object-fit: contain;
+}
+
+.entry[data-school='nyu'] .sketch {
+  transform: rotate(-0.5deg);
+}
+
+.entry[data-school='columbia'] .sketch {
+  transform: rotate(0.5deg);
+}
+
+.caption {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-1);
+  color: var(--color-ink-muted);
+  font-size: var(--text-small);
+  line-height: 1.5;
+}
+
+.degree {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.detail {
+  font-family: var(--font-display);
+  font-size: var(--text-annotation);
+}
+
+.bridge {
+  position: relative;
+  z-index: 1;
+  width: clamp(6rem, 10vw, 9rem);
+  margin: var(--space-7) calc(-1 * var(--space-5)) 0;
+}
+
+.bridge img {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 52rem) {
+  .path,
+  .step,
+  .step:last-child {
+    grid-template-columns: 1fr;
+  }
+
+  .path {
+    gap: var(--space-5);
+  }
+
+  .entry {
+    width: min(100%, 34rem);
+    justify-self: center;
+  }
+
+  .bridge {
+    width: 7rem;
+    margin: calc(-1 * var(--space-4)) auto;
+    transform: rotate(2deg);
+  }
+}

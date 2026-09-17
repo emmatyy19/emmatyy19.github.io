@@ -1,4 +1,5 @@
 import { About } from '../sections/About/About.tsx'
+import { Education } from '../sections/Education/Education.tsx'
 import { Elsewhere } from '../sections/Elsewhere/Elsewhere.tsx'
 import { Footer } from '../sections/Footer/Footer.tsx'
 import { Header } from '../sections/Header/Header.tsx'
@@ -14,6 +15,7 @@ export function App() {
         <Hero />
         <About />
         <Journey />
+        <Education />
         <Elsewhere />
       </main>
       <Footer />
