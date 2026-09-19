@@ -4,7 +4,7 @@ export const professionalLinks = [
   {
     id: 'github',
     label: 'GitHub',
-    href: '#replace-github-url',
+    href: 'https://github.com/emmatyy19?tab=repositories',
     external: true,
   },
   {

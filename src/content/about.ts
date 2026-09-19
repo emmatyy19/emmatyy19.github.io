@@ -1,1 +1,2 @@
-export const aboutCopy = '[ABOUT_COPY]'
+export const aboutCopy =
+  'I’m a software engineer working across AI, data, and cloud infrastructure. My path began with finance and data science at NYU Stern and continues through computer science and machine learning at Columbia. I enjoy understanding a problem from different angles and finding a practical way forward. For me, engineering is both technical and creative, with plenty of room to experiment, reflect, and keep improving what I build.'

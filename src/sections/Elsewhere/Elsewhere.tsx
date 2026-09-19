@@ -9,7 +9,14 @@ export function Elsewhere() {
         <SectionHeading accent="blue" id="elsewhere-heading">
           Elsewhere
         </SectionHeading>
-        <p>[ELSEWHERE_INTRO]</p>
+        <p>
+          When I’m not at my computer, I’m usually working on my golf swing or
+          crocheting something small. They are my favorite ways to slow down,
+          reset, and be creative. I love the calm of repetition, the little
+          sense of adventure that comes with trying something new, and the
+          chance to improve at my own pace. Both give me quiet space to think
+          and reflect.
+        </p>
       </div>
       <BinderTabs />
     </section>

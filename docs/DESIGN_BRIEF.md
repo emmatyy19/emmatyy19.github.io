@@ -90,6 +90,6 @@ There is no top navigation, projects grid, blog, contact form, router, or dark m
 
 ## Content boundaries
 
-Until Emma approves final content, use explicit placeholders. Do not invent biographical details, projects, captions, professional URLs, résumé content, or photography.
+Approved personal copy and professional URLs live in the typed content modules. Keep future revisions concise, grounded in information Emma has provided, and free of invented biographical details.
 
 The final footer should remain minimal: `Emma · 2026`.
