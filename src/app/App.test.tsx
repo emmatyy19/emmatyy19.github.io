@@ -27,9 +27,13 @@ describe('App', () => {
   it('renders the professional links exactly once', () => {
     render(<App />)
 
-    for (const label of ['GitHub', 'LinkedIn', 'Resume']) {
+    for (const label of ['Resume', 'LinkedIn', 'GitHub']) {
       expect(screen.getAllByRole('link', { name: label })).toHaveLength(1)
     }
+
+    expect(screen.getAllByRole('link').map((link) => link.textContent)).toEqual(
+      expect.arrayContaining(['Resume', 'LinkedIn', 'GitHub']),
+    )
 
     expect(screen.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute(
       'href',
