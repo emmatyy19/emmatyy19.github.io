@@ -12,6 +12,23 @@
   );
 }
 
+.botanical {
+  position: absolute;
+  z-index: 0;
+  top: -2.1rem;
+  right: -1.4rem;
+  width: 6.3rem;
+  opacity: 0.58;
+  pointer-events: none;
+  transform: rotate(68deg);
+  user-select: none;
+}
+
+.section > :not(.botanical) {
+  position: relative;
+  z-index: 1;
+}
+
 .timeline {
   display: grid;
   gap: var(--space-4);
@@ -78,6 +95,13 @@
 }
 
 @media (max-width: 52rem) {
+  .botanical {
+    top: -1.2rem;
+    right: -0.5rem;
+    width: 4.8rem;
+    opacity: 0.5;
+  }
+
   .timeline {
     grid-template-columns: 1fr;
   }

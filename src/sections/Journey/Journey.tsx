@@ -2,11 +2,19 @@ import { JourneyCollage } from '../../components/JourneyCollage/JourneyCollage.t
 import { JourneyConnector } from '../../components/JourneyConnector/JourneyConnector.tsx'
 import { SectionHeading } from '../../components/SectionHeading/SectionHeading.tsx'
 import { journeyEntries } from '../../content/journey.ts'
+import blushSprigUrl from '../../assets/decor/pressed-blush-sprig.webp'
 import styles from './Journey.module.css'
 
 export function Journey() {
   return (
     <section aria-labelledby="journey-heading" className={styles.section}>
+      <img
+        alt=""
+        aria-hidden="true"
+        className={styles.botanical}
+        loading="lazy"
+        src={blushSprigUrl}
+      />
       <SectionHeading accent="blush" id="journey-heading">
         My Journey
       </SectionHeading>

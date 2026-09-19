@@ -1,4 +1,5 @@
 import { SectionHeading } from '../../components/SectionHeading/SectionHeading.tsx'
+import babysBreathUrl from '../../assets/decor/pressed-babys-breath.webp'
 import { BinderTabs } from './BinderTabs.tsx'
 import styles from './Elsewhere.module.css'
 
@@ -6,6 +7,13 @@ export function Elsewhere() {
   return (
     <section aria-labelledby="elsewhere-heading" className={styles.section}>
       <div className={styles.intro}>
+        <img
+          alt=""
+          aria-hidden="true"
+          className={styles.botanical}
+          loading="lazy"
+          src={babysBreathUrl}
+        />
         <SectionHeading accent="blue" id="elsewhere-heading">
           Elsewhere
         </SectionHeading>
