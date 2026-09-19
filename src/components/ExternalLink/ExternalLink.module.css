@@ -3,17 +3,19 @@
   min-height: 2.75rem;
   align-items: center;
   gap: var(--space-2);
-  border-block-end: 1px solid var(--color-rule-strong);
   color: var(--color-ink);
   font-size: var(--text-small);
   font-weight: 600;
   text-decoration: none;
-  transition:
-    border-color var(--transition-quick) ease,
-    transform var(--transition-quick) ease;
+  transition: transform var(--transition-quick) ease;
 }
 
 .link:hover {
-  border-color: var(--color-ink);
   transform: translateY(-1px);
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
 }

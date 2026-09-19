@@ -27,7 +27,7 @@ test('homepage loads', async ({ page }) => {
       name: 'The same crochet piece gathered into a bouquet of purple tulips',
     }),
   ).toBeVisible()
-  await expect(page.getByRole('link', { name: 'Resume' })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Resume' })).toBeVisible()
 
   const accessibilityScan = await new AxeBuilder({ page }).analyze()
   expect(accessibilityScan.violations).toEqual([])

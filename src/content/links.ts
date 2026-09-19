@@ -2,10 +2,11 @@ import type { ProfessionalLink } from '../types/content.ts'
 
 export const professionalLinks = [
   {
-    id: 'github',
-    label: 'GitHub',
-    href: 'https://github.com/emmatyy19?tab=repositories',
-    external: true,
+    id: 'resume',
+    label: 'Resume',
+    href: '/documents/emma-resume.pdf',
+    external: false,
+    download: 'Emma-Resume.pdf',
   },
   {
     id: 'linkedin',
@@ -14,10 +15,9 @@ export const professionalLinks = [
     external: true,
   },
   {
-    id: 'resume',
-    label: 'Resume',
-    href: '/documents/emma-resume.pdf',
-    external: false,
-    download: 'Emma-Resume.pdf',
+    id: 'github',
+    label: 'GitHub',
+    href: 'https://github.com/emmatyy19?tab=repositories',
+    external: true,
   },
 ] satisfies readonly ProfessionalLink[]
