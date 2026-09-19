@@ -66,14 +66,14 @@ describe('App', () => {
       .map((heading) => heading.textContent)
 
     expect(cities).toEqual(['Shanghai', 'Cupertino', 'New York City'])
+    expect(within(journey).getByText('where I grew up')).toBeInTheDocument()
     expect(
-      within(journey).getByText('where family, food, and home began'),
+      within(journey).getByText('teenage years and a fresh start'),
     ).toBeInTheDocument()
     expect(
-      within(journey).getByText('where curiosity grew into craft'),
-    ).toBeInTheDocument()
-    expect(
-      within(journey).getByText('where finance met software and AI'),
+      within(journey).getByText(
+        'college, the start of my career, and a life of my own',
+      ),
     ).toBeInTheDocument()
   })
 
@@ -81,13 +81,13 @@ describe('App', () => {
     render(<App />)
 
     expect(
-      screen.getByText(/I build thoughtful AI systems/),
+      screen.getByText(/I like building useful things/),
     ).toBeInTheDocument()
     expect(
       screen.getByText(/software engineer working across AI, data/),
     ).toBeInTheDocument()
     expect(
-      screen.getByText(/I trade code for golf courses and yarn/),
+      screen.getByText(/working on my golf swing or crocheting/),
     ).toBeInTheDocument()
     expect(screen.queryByText(/^\[[A-Z_]+\]$/)).not.toBeInTheDocument()
   })
