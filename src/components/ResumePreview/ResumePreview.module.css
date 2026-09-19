@@ -1,0 +1,136 @@
+.trigger {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: var(--text-small);
+  font-weight: 600;
+  transition: transform var(--transition-quick) ease;
+}
+
+.trigger:hover {
+  transform: translateY(-1px);
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 20;
+  display: grid;
+  padding: clamp(var(--space-3), 4vw, var(--space-7));
+  background: color-mix(in srgb, var(--color-ink) 42%, transparent);
+  inset: 0;
+  place-items: center;
+}
+
+.backdropClose {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  inset: 0;
+}
+
+.dialog {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(62rem, 100%);
+  height: min(52rem, 92dvh);
+  overflow: hidden;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-paper);
+  background: var(--color-paper-raised);
+  box-shadow: 0 1.5rem 4rem rgb(54 46 38 / 25%);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.header,
+.actions {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+}
+
+.header {
+  justify-content: space-between;
+  border-block-end: 1px solid var(--color-rule);
+}
+
+.header h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-section-heading);
+  font-weight: 400;
+}
+
+.closeButton {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-ink);
+  cursor: pointer;
+  font-size: 1.5rem;
+  place-items: center;
+}
+
+.closeButton:hover {
+  background: var(--color-blush);
+}
+
+.documentViewport {
+  overflow: auto;
+  padding: clamp(var(--space-2), 2vw, var(--space-4));
+  background: #e7e5e1;
+}
+
+.document {
+  display: block;
+  width: 100%;
+  max-width: 52rem;
+  height: auto;
+  margin-inline: auto;
+  background: white;
+  box-shadow: 0 0.25rem 1rem rgb(54 46 38 / 15%);
+}
+
+.actions {
+  justify-content: flex-end;
+  gap: var(--space-4);
+  border-block-start: 1px solid var(--color-rule);
+}
+
+.actions a {
+  color: var(--color-ink);
+  font-size: var(--text-small);
+  font-weight: 600;
+}
+
+@media (max-width: 48rem) {
+  .backdrop {
+    padding: var(--space-2);
+  }
+
+  .dialog {
+    width: 100%;
+    height: calc(100dvh - (2 * var(--space-2)));
+  }
+
+  .actions {
+    justify-content: center;
+  }
+}

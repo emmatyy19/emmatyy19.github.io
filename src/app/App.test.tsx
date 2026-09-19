@@ -24,16 +24,19 @@ describe('App', () => {
     ).toBeInTheDocument()
   })
 
-  it('renders the professional links exactly once', () => {
+  it('renders the professional links in the approved order', () => {
     render(<App />)
 
-    for (const label of ['Resume', 'LinkedIn', 'GitHub']) {
+    expect(screen.getByRole('button', { name: 'Resume' })).toBeInTheDocument()
+
+    for (const label of ['LinkedIn', 'GitHub']) {
       expect(screen.getAllByRole('link', { name: label })).toHaveLength(1)
     }
 
-    expect(screen.getAllByRole('link').map((link) => link.textContent)).toEqual(
-      expect.arrayContaining(['Resume', 'LinkedIn', 'GitHub']),
-    )
+    const navigation = screen.getByRole('navigation', {
+      name: 'Professional links',
+    })
+    expect(navigation.textContent).toBe('ResumeLinkedInGitHub')
 
     expect(screen.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute(
       'href',
@@ -43,14 +46,32 @@ describe('App', () => {
       'href',
       'https://github.com/emmatyy19?tab=repositories',
     )
-    expect(screen.getByRole('link', { name: 'Resume' })).toHaveAttribute(
-      'href',
-      '/documents/emma-resume.pdf',
-    )
-    expect(screen.getByRole('link', { name: 'Resume' })).toHaveAttribute(
+  })
+
+  it('previews the resume without leaving the page', async () => {
+    const user = userEvent.setup()
+    render(<App />)
+
+    await user.click(screen.getByRole('button', { name: 'Resume' }))
+
+    expect(screen.getByRole('dialog', { name: 'Resume' })).toBeInTheDocument()
+    expect(
+      screen.getByRole('img', { name: "Preview of Emma's resume" }),
+    ).toHaveAttribute('src', expect.stringContaining('emma-resume-preview'))
+    expect(
+      screen.getByRole('link', { name: 'Open in new tab' }),
+    ).toHaveAttribute('href', '/documents/emma-resume.pdf')
+    expect(screen.getByRole('link', { name: 'Download' })).toHaveAttribute(
       'download',
       'Emma-Resume.pdf',
     )
+
+    await user.click(
+      screen.getByRole('button', { name: 'Close resume preview' }),
+    )
+    expect(
+      screen.queryByRole('dialog', { name: 'Resume' }),
+    ).not.toBeInTheDocument()
   })
 
   it('renders the approved portrait', () => {

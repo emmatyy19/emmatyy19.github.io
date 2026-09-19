@@ -1,4 +1,5 @@
 import { ExternalLink } from '../../components/ExternalLink/ExternalLink.tsx'
+import { ResumePreview } from '../../components/ResumePreview/ResumePreview.tsx'
 import { professionalLinks } from '../../content/links.ts'
 import { site } from '../../content/site.ts'
 import portraitUrl from '../../assets/hero/emma-portrait.jpg'
@@ -11,7 +12,13 @@ export function Hero() {
         <p>{site.intro}</p>
         <nav aria-label="Professional links" className={styles.links}>
           {professionalLinks.map((link) => (
-            <ExternalLink key={link.id} link={link} />
+            <span key={link.id}>
+              {link.id === 'resume' ? (
+                <ResumePreview link={link} />
+              ) : (
+                <ExternalLink link={link} />
+              )}
+            </span>
           ))}
         </nav>
       </div>

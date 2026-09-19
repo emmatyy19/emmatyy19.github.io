@@ -1,5 +1,4 @@
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa6'
-import { HiOutlineDocumentText } from 'react-icons/hi2'
 import type { ProfessionalLink } from '../../types/content.ts'
 import styles from './ExternalLink.module.css'
 
@@ -10,10 +9,11 @@ type ExternalLinkProps = Readonly<{
 const icons = {
   github: FaGithub,
   linkedin: FaLinkedinIn,
-  resume: HiOutlineDocumentText,
 } as const
 
 export function ExternalLink({ link }: ExternalLinkProps) {
+  if (link.id === 'resume') return null
+
   const Icon = icons[link.id]
 
   return (
