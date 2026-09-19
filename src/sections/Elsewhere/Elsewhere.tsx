@@ -1,5 +1,5 @@
 import { SectionHeading } from '../../components/SectionHeading/SectionHeading.tsx'
-import babysBreathUrl from '../../assets/decor/pressed-babys-breath.webp'
+import eucalyptusUrl from '../../assets/decor/pressed-eucalyptus.webp'
 import { BinderTabs } from './BinderTabs.tsx'
 import styles from './Elsewhere.module.css'
 
@@ -12,7 +12,7 @@ export function Elsewhere() {
           aria-hidden="true"
           className={styles.botanical}
           loading="lazy"
-          src={babysBreathUrl}
+          src={eucalyptusUrl}
         />
         <SectionHeading accent="blue" id="elsewhere-heading">
           Elsewhere

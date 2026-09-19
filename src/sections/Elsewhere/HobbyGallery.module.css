@@ -1,9 +1,22 @@
 .gallery {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
   align-items: center;
   gap: var(--space-4);
   animation: reveal var(--transition-quick) ease-out;
+}
+
+.leafAccent {
+  position: absolute;
+  z-index: 3;
+  top: 41%;
+  right: 27%;
+  width: 8.5rem;
+  opacity: 0.78;
+  pointer-events: none;
+  transform: rotate(-13deg);
+  user-select: none;
 }
 
 .item {
@@ -128,6 +141,12 @@
     width: min(75%, 18rem);
     grid-column: 1 / -1;
     justify-self: center;
+  }
+
+  .leafAccent {
+    top: 44%;
+    right: -0.4rem;
+    width: 6.3rem;
   }
 }
 

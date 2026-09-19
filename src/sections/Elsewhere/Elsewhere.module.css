@@ -16,12 +16,12 @@
 .botanical {
   position: absolute;
   z-index: 0;
-  top: -3.7rem;
-  right: -1.25rem;
-  width: 5.7rem;
-  opacity: 0.55;
+  top: -3.2rem;
+  right: -0.5rem;
+  width: 6.6rem;
+  opacity: 0.52;
   pointer-events: none;
-  transform: rotate(29deg);
+  transform: rotate(21deg);
   user-select: none;
 }
 
@@ -48,8 +48,8 @@
   }
 
   .botanical {
-    top: -2rem;
-    right: 0.75rem;
-    width: 4.4rem;
+    top: -1.9rem;
+    right: 0.5rem;
+    width: 5rem;
   }
 }

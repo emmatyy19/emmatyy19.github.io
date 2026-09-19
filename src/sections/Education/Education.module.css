@@ -78,12 +78,24 @@
   transform: translateX(-50%) rotate(-2deg);
 }
 
-.sketch img {
+.schoolImage {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
   mix-blend-mode: multiply;
   object-fit: contain;
+}
+
+.leafAccent {
+  position: absolute;
+  z-index: 3;
+  right: -1.15rem;
+  bottom: -1.35rem;
+  width: 4.7rem;
+  opacity: 0.86;
+  pointer-events: none;
+  transform: rotate(19deg);
+  user-select: none;
 }
 
 .entry[data-school='nyu'] .sketch {

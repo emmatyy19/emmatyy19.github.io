@@ -1,3 +1,4 @@
+import ginkgoUrl from '../../assets/decor/pressed-ginkgo.webp'
 import libertyBridgeUrl from '../../assets/education/statue-liberty-bridge.png'
 import { SectionHeading } from '../../components/SectionHeading/SectionHeading.tsx'
 import { educationEntries } from '../../content/education.ts'
@@ -17,9 +18,19 @@ export function Education() {
               <figure className={styles.sketch}>
                 <img
                   alt={entry.image.alt}
+                  className={styles.schoolImage}
                   loading="lazy"
                   src={entry.image.src}
                 />
+                {entry.id === 'nyu' ? (
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className={styles.leafAccent}
+                    loading="lazy"
+                    src={ginkgoUrl}
+                  />
+                ) : null}
               </figure>
               <div className={styles.caption}>
                 <p className={styles.degree}>{entry.degree}</p>

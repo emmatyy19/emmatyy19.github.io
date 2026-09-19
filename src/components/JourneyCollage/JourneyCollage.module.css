@@ -100,6 +100,18 @@
   transform: rotate(-3deg);
 }
 
+.leafAccent {
+  position: absolute;
+  z-index: 3;
+  top: 7.2rem;
+  left: -0.8rem;
+  width: 7.2rem;
+  opacity: 0.82;
+  pointer-events: none;
+  transform: rotate(-34deg);
+  user-select: none;
+}
+
 .caption {
   justify-self: center;
   color: var(--color-ink-muted);
@@ -200,5 +212,11 @@
 
   .supporting[data-position='2'] {
     display: none;
+  }
+
+  .leafAccent {
+    top: 7.4rem;
+    left: 1%;
+    width: 6.7rem;
   }
 }
