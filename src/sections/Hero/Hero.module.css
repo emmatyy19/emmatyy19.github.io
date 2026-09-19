@@ -1,14 +1,14 @@
 .hero {
   display: grid;
-  min-height: 28rem;
+  min-height: 24rem;
   align-items: center;
-  gap: clamp(var(--space-7), 9vw, var(--space-10));
+  gap: clamp(var(--space-6), 7vw, var(--space-9));
   grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.72fr);
 }
 
 .copy {
   display: grid;
-  gap: var(--space-6);
+  gap: var(--space-5);
 }
 
 .copy > p {
@@ -38,29 +38,74 @@
 
 .portrait {
   position: relative;
-  max-width: 22rem;
+  max-width: 21rem;
   justify-self: end;
-  transform: rotate(-1.25deg);
+  transform: rotate(-1.8deg);
 }
 
 .tape {
   position: absolute;
   z-index: 1;
-  top: -0.8rem;
-  left: 50%;
-  width: 7rem;
-  height: 1.65rem;
+  top: -0.55rem;
+  left: 61%;
+  width: 6.4rem;
+  height: 1.35rem;
   background: color-mix(in srgb, var(--color-blush) 78%, transparent);
-  transform: translateX(-50%) rotate(1deg);
+  clip-path: polygon(3% 10%, 96% 0, 100% 88%, 6% 100%, 0 24%);
+  transform: translateX(-50%) rotate(-2deg);
 }
 
 .photoFrame {
+  position: relative;
   margin: 0;
   padding: var(--space-3);
   border: 1px solid color-mix(in srgb, var(--color-rule) 75%, transparent);
   border-radius: var(--radius-paper);
   background: var(--color-paper-raised);
   box-shadow: var(--shadow-photo);
+}
+
+.photoFrame::after {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid color-mix(in srgb, var(--color-blush) 72%, transparent);
+  content: '';
+  inset: -0.35rem 0.4rem 0.25rem -0.35rem;
+  transform: rotate(2.4deg);
+}
+
+.doodle {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  stroke-width: 1.15;
+}
+
+.sparkle {
+  top: 13%;
+  left: -2.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #b99091;
+  transform: rotate(-14deg);
+}
+
+.heart {
+  top: 31%;
+  right: -1.65rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  color: var(--color-olive);
+  transform: rotate(13deg);
+}
+
+.flower {
+  right: -2.35rem;
+  bottom: 0.75rem;
+  width: 3.7rem;
+  height: 3.7rem;
+  color: #8b907a;
+  transform: rotate(17deg);
 }
 
 .photo {
@@ -80,5 +125,14 @@
   .portrait {
     width: min(100%, 20rem);
     justify-self: center;
+  }
+
+  .sparkle {
+    left: -0.75rem;
+  }
+
+  .heart,
+  .flower {
+    right: -0.75rem;
   }
 }

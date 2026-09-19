@@ -5,7 +5,7 @@
 
 .stage {
   position: relative;
-  min-height: 23rem;
+  min-height: 20.5rem;
   isolation: isolate;
 }
 
@@ -49,6 +49,7 @@
 }
 
 .imageFrame {
+  position: relative;
   width: 100%;
   margin: 0;
   padding: var(--space-2);
@@ -56,6 +57,19 @@
   border-radius: var(--radius-paper);
   background: var(--color-paper-raised);
   box-shadow: var(--shadow-photo);
+}
+
+.primary .imageFrame::before {
+  position: absolute;
+  z-index: 2;
+  top: -0.42rem;
+  left: 50%;
+  width: 3.7rem;
+  height: 0.9rem;
+  background: color-mix(in srgb, var(--color-sand) 72%, transparent);
+  clip-path: polygon(2% 12%, 97% 0, 100% 86%, 5% 100%, 0 28%);
+  content: '';
+  transform: translateX(-50%) rotate(-2deg);
 }
 
 .image {
@@ -157,13 +171,13 @@
 
 @media (max-width: 64rem) {
   .stage {
-    min-height: 19rem;
+    min-height: 18rem;
   }
 }
 
 @media (max-width: 52rem) {
   .stage {
-    min-height: clamp(20rem, 92vw, 26rem);
+    min-height: clamp(18rem, 84vw, 23rem);
   }
 
   .primary,

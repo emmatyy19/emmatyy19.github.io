@@ -1,6 +1,6 @@
 .section {
   display: grid;
-  gap: var(--space-7);
+  gap: var(--space-6);
 }
 
 .path {
@@ -24,7 +24,7 @@
   --school-wash: color-mix(in srgb, var(--color-blush) 48%, transparent);
   display: grid;
   min-width: 0;
-  gap: var(--space-4);
+  gap: var(--space-3);
   text-align: center;
 }
 
@@ -58,7 +58,24 @@
 }
 
 .sketch {
+  position: relative;
   margin: 0;
+  padding: var(--space-2);
+  background: var(--color-paper-raised);
+  box-shadow: var(--shadow-photo);
+}
+
+.sketch::before {
+  position: absolute;
+  z-index: 2;
+  top: -0.45rem;
+  left: 50%;
+  width: 4.2rem;
+  height: 0.95rem;
+  background: var(--school-wash);
+  clip-path: polygon(2% 8%, 98% 0, 100% 88%, 4% 100%, 0 18%);
+  content: '';
+  transform: translateX(-50%) rotate(-2deg);
 }
 
 .sketch img {
@@ -100,7 +117,7 @@
   position: relative;
   z-index: 1;
   width: clamp(6rem, 10vw, 9rem);
-  margin: var(--space-7) calc(-1 * var(--space-5)) 0;
+  margin: var(--space-5) calc(-1 * var(--space-5)) 0;
 }
 
 .bridge img {

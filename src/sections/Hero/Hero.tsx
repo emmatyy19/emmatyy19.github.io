@@ -1,3 +1,4 @@
+import { PiFlowerTulipThin, PiHeartThin, PiSparkleThin } from 'react-icons/pi'
 import { ExternalLink } from '../../components/ExternalLink/ExternalLink.tsx'
 import { ResumePreview } from '../../components/ResumePreview/ResumePreview.tsx'
 import { professionalLinks } from '../../content/links.ts'
@@ -23,6 +24,18 @@ export function Hero() {
         </nav>
       </div>
       <div className={styles.portrait}>
+        <PiSparkleThin
+          aria-hidden="true"
+          className={[styles.doodle, styles.sparkle].join(' ')}
+        />
+        <PiHeartThin
+          aria-hidden="true"
+          className={[styles.doodle, styles.heart].join(' ')}
+        />
+        <PiFlowerTulipThin
+          aria-hidden="true"
+          className={[styles.doodle, styles.flower].join(' ')}
+        />
         <span aria-hidden="true" className={styles.tape} />
         <figure className={styles.photoFrame}>
           <img

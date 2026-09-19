@@ -23,8 +23,8 @@
   --space-9: 6rem;
   --space-10: 8rem;
   --content-max-width: 75rem;
-  --page-padding: clamp(1.25rem, 5vw, 4rem);
-  --section-gap: clamp(5rem, 10vw, 8rem);
+  --page-padding: clamp(1rem, 4vw, 3.25rem);
+  --section-gap: clamp(2.75rem, 5vw, 4.25rem);
   --radius-paper: 0.3rem;
   --shadow-paper: 0 2px 8px rgb(47 43 38 / 6%);
   --shadow-photo: 0 4px 14px rgb(47 43 38 / 8%);

@@ -1,5 +1,5 @@
 .header {
-  padding-block: clamp(var(--space-7), 7vw, var(--space-9)) var(--space-7);
+  padding-block: clamp(var(--space-5), 5vw, var(--space-7)) var(--space-5);
 }
 
 .header h1 {

@@ -1,17 +1,17 @@
 .about {
   display: grid;
   align-items: center;
-  gap: var(--space-7);
+  gap: var(--space-6);
   grid-template-columns: 0.55fr minmax(0, 1.6fr);
 }
 
 .about > p {
   max-width: 38rem;
-  padding-inline-start: var(--space-7);
+  padding-inline-start: var(--space-6);
   border-inline-start: 1px solid var(--color-rule-strong);
   color: var(--color-ink-muted);
   font-size: var(--text-body-large);
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 @media (max-width: 48rem) {

@@ -1,7 +1,8 @@
 .section {
+  position: relative;
   display: grid;
-  gap: var(--space-7);
-  padding-block: var(--space-7);
+  gap: var(--space-6);
+  padding-block: var(--space-6);
   background: linear-gradient(
     90deg,
     transparent,
@@ -44,6 +45,19 @@
   box-shadow: var(--shadow-paper);
   text-align: center;
   transform: rotate(-1deg);
+}
+
+.entry header::before {
+  position: absolute;
+  top: -0.3rem;
+  left: 50%;
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 50%;
+  background: #bb7167;
+  box-shadow: 0 0.12rem 0.2rem rgb(48 46 43 / 24%);
+  content: '';
+  transform: translateX(-50%);
 }
 
 .entry[data-city='cupertino'] header {
