@@ -52,7 +52,7 @@ export function ResumePreview({ link }: ResumePreviewProps) {
 
       {isOpen ? (
         <div
-          aria-labelledby="resume-preview-title"
+          aria-label="Resume"
           aria-modal="true"
           className={styles.backdrop}
           role="dialog"
@@ -68,7 +68,6 @@ export function ResumePreview({ link }: ResumePreviewProps) {
           />
           <section className={styles.dialog}>
             <header className={styles.header}>
-              <h2 id="resume-preview-title">Resume</h2>
               <button
                 aria-label="Close resume preview"
                 className={styles.closeButton}
