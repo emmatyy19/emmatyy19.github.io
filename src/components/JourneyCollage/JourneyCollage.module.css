@@ -1,11 +1,11 @@
 .composition {
   display: grid;
-  gap: var(--space-3);
+  gap: var(--space-2);
 }
 
 .stage {
   position: relative;
-  min-height: 20.5rem;
+  min-height: 18.75rem;
   isolation: isolate;
 }
 
@@ -16,26 +16,26 @@
 }
 
 .primary {
-  top: 4.5rem;
-  left: 12%;
-  width: 78%;
+  top: 3.6rem;
+  left: 5%;
+  width: 90%;
   transform: rotate(-1deg);
 }
 
 .supporting {
-  width: 29%;
+  width: 33%;
 }
 
 .supporting[data-position='1'] {
   z-index: 2;
-  bottom: 0.5rem;
-  left: 0;
+  bottom: 0.1rem;
+  left: -1%;
   transform: rotate(-3deg);
 }
 
 .supporting[data-position='2'] {
-  top: 0;
-  right: 0;
+  top: 0.4rem;
+  right: -1%;
   transform: rotate(2.5deg);
 }
 
@@ -91,9 +91,9 @@
   position: absolute;
   z-index: -1;
   top: 11%;
-  right: 3%;
-  width: 78%;
-  height: 58%;
+  right: 1%;
+  width: 86%;
+  height: 64%;
   border-radius: 48% 52% 45% 55%;
   background: var(--color-blue);
   opacity: 0.42;
@@ -113,6 +113,7 @@
 }
 
 .caption {
+  margin-block-start: -0.2rem;
   justify-self: center;
   color: var(--color-ink-muted);
   font-family: var(--font-display);
@@ -123,9 +124,9 @@
 }
 
 .composition[data-city='cupertino'] .primary {
-  top: 4rem;
-  left: 5%;
-  width: 80%;
+  top: 3.35rem;
+  left: 3%;
+  width: 91%;
   transform: rotate(1deg);
 }
 
@@ -133,15 +134,15 @@
   right: 0;
   bottom: 0;
   left: auto;
-  width: 31%;
+  width: 34%;
   transform: rotate(3deg);
 }
 
 .composition[data-city='cupertino'] .supporting[data-position='2'] {
-  top: 0.5rem;
+  top: 0.25rem;
   right: auto;
   left: 0;
-  width: 25%;
+  width: 29%;
   transform: rotate(-2deg);
 }
 
@@ -153,24 +154,24 @@
 }
 
 .composition[data-city='new-york'] .primary {
-  top: 4.25rem;
-  right: 7%;
+  top: 3.45rem;
+  right: 3%;
   left: auto;
-  width: 78%;
+  width: 91%;
   transform: rotate(-0.5deg);
 }
 
 .composition[data-city='new-york'] .supporting[data-position='1'] {
-  bottom: 0;
-  left: 0;
-  width: 27%;
+  bottom: 0.1rem;
+  left: -1%;
+  width: 32%;
   transform: rotate(-2deg);
 }
 
 .composition[data-city='new-york'] .supporting[data-position='2'] {
-  top: 0;
-  right: 0;
-  width: 28%;
+  top: 0.25rem;
+  right: -1%;
+  width: 31%;
   transform: rotate(3deg);
 }
 
@@ -183,22 +184,22 @@
 
 @media (max-width: 64rem) {
   .stage {
-    min-height: 18rem;
+    min-height: 17.5rem;
   }
 }
 
 @media (max-width: 52rem) {
   .stage {
-    min-height: clamp(18rem, 84vw, 23rem);
+    min-height: clamp(18rem, 80vw, 22rem);
   }
 
   .primary,
   .composition[data-city='cupertino'] .primary,
   .composition[data-city='new-york'] .primary {
-    top: 3.75rem;
+    top: 3.35rem;
     right: auto;
-    left: 10%;
-    width: 80%;
+    left: 5%;
+    width: 90%;
   }
 
   .supporting[data-position='1'],
@@ -207,7 +208,7 @@
     right: auto;
     bottom: 0;
     left: 0;
-    width: 30%;
+    width: 33%;
   }
 
   .supporting[data-position='2'] {

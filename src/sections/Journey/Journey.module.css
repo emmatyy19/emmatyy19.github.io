@@ -1,8 +1,8 @@
 .section {
   position: relative;
   display: grid;
-  gap: var(--space-6);
-  padding-block: var(--space-6);
+  gap: var(--space-5);
+  padding-block: var(--space-5);
   background: linear-gradient(
     90deg,
     transparent,
@@ -14,31 +14,32 @@
 
 .timeline {
   display: grid;
-  gap: var(--space-4);
+  gap: clamp(0.15rem, 0.7vw, 0.6rem);
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .step {
-  display: grid;
-  align-items: center;
-  gap: var(--space-4);
-  grid-template-columns: minmax(0, 1fr) auto;
-}
-
-.step:last-child {
-  grid-template-columns: 1fr;
+  min-width: 0;
 }
 
 .entry {
   display: grid;
-  gap: var(--space-2);
+  gap: 0;
+}
+
+.entry[data-city='cupertino'] {
+  transform: translateY(0.55rem);
+}
+
+.entry[data-city='new-york'] {
+  transform: translateY(-0.25rem);
 }
 
 .entry header {
   position: relative;
   z-index: 1;
   width: fit-content;
-  margin-block-end: calc(-1 * var(--space-8));
+  margin-block-end: -3.7rem;
   margin-inline: auto;
   padding: var(--space-3) var(--space-5);
   background: var(--color-paper-raised);
@@ -79,17 +80,18 @@
 
 @media (max-width: 52rem) {
   .timeline {
+    gap: var(--space-3);
     grid-template-columns: 1fr;
   }
 
   .step,
   .step:last-child {
-    width: min(100%, 28rem);
-    grid-template-columns: 1fr;
+    width: min(100%, 30rem);
     justify-self: center;
   }
 
-  .step > svg {
-    justify-self: center;
+  .entry[data-city='cupertino'],
+  .entry[data-city='new-york'] {
+    transform: none;
   }
 }

@@ -1,5 +1,4 @@
 import { JourneyCollage } from '../../components/JourneyCollage/JourneyCollage.tsx'
-import { JourneyConnector } from '../../components/JourneyConnector/JourneyConnector.tsx'
 import { SectionHeading } from '../../components/SectionHeading/SectionHeading.tsx'
 import { journeyEntries } from '../../content/journey.ts'
 import styles from './Journey.module.css'
@@ -11,7 +10,7 @@ export function Journey() {
         My Journey
       </SectionHeading>
       <div className={styles.timeline}>
-        {journeyEntries.map((entry, index) => (
+        {journeyEntries.map((entry) => (
           <div className={styles.step} key={entry.id}>
             <article className={styles.entry} data-city={entry.id}>
               <header>
@@ -20,7 +19,6 @@ export function Journey() {
               </header>
               <JourneyCollage entry={entry} />
             </article>
-            {index < journeyEntries.length - 1 ? <JourneyConnector /> : null}
           </div>
         ))}
       </div>

@@ -158,4 +158,8 @@
     margin: calc(-1 * var(--space-4)) auto;
     transform: rotate(2deg);
   }
+
+  .leafAccent {
+    right: 0;
+  }
 }
