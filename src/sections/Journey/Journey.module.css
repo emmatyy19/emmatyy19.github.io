@@ -39,21 +39,21 @@
   position: relative;
   z-index: 1;
   width: fit-content;
-  margin-block-end: -3.7rem;
-  margin-inline: auto;
-  padding: var(--space-3) var(--space-5);
+  margin-block-end: -3.2rem;
+  margin-inline: 11% auto;
+  padding: 0.55rem 1rem 0.5rem;
   background: var(--color-paper-raised);
   box-shadow: var(--shadow-paper);
   text-align: center;
-  transform: rotate(-1deg);
+  transform: rotate(-2deg);
 }
 
 .entry header::before {
   position: absolute;
   top: -0.3rem;
-  left: 50%;
-  width: 0.72rem;
-  height: 0.72rem;
+  left: 72%;
+  width: 0.65rem;
+  height: 0.65rem;
   border-radius: 50%;
   background: #bb7167;
   box-shadow: 0 0.12rem 0.2rem rgb(48 46 43 / 24%);
@@ -62,20 +62,38 @@
 }
 
 .entry[data-city='cupertino'] header {
-  transform: rotate(1deg);
+  margin-inline: 29% auto;
+  transform: rotate(1.4deg);
+}
+
+.entry[data-city='cupertino'] header::before {
+  left: 24%;
+  background: #a9665e;
+}
+
+.entry[data-city='new-york'] header {
+  margin-inline: auto 5%;
+  transform: rotate(-1.2deg);
+}
+
+.entry[data-city='new-york'] header::before {
+  left: 61%;
+  background: #c47c6f;
 }
 
 .entry h3 {
   font-family: var(--font-display);
-  font-size: var(--text-city);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
   font-weight: 400;
   line-height: 1;
 }
 
 .entry header p {
-  margin-block-start: var(--space-1);
+  margin-block-start: 0.1rem;
   color: var(--color-ink-muted);
-  font-size: var(--text-small);
+  font-family: var(--font-display);
+  font-size: clamp(0.82rem, 1.2vw, 1rem);
+  line-height: 1;
 }
 
 @media (max-width: 52rem) {
