@@ -122,7 +122,7 @@
 
 .entry header::before {
   position: absolute;
-  top: -0.3rem;
+  top: 0.18rem;
   left: 72%;
   width: 0.65rem;
   height: 0.65rem;
@@ -134,7 +134,7 @@
 }
 
 .entry[data-city='shanghai'] header {
-  transform: translateY(1.35rem) rotate(-2deg);
+  transform: translateY(1.85rem) rotate(-2deg);
 }
 
 .entry[data-city='cupertino'] header {
