@@ -8,7 +8,11 @@ type JourneyCollageProps = Readonly<{
 
 function JourneyImage({ image }: Readonly<{ image: ImageAsset }>) {
   return (
-    <figure className={styles.imageFrame} data-variant={image.orientation}>
+    <figure
+      className={styles.imageFrame}
+      data-image={image.id}
+      data-variant={image.orientation}
+    >
       <img
         alt={image.alt}
         className={styles.image}

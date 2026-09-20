@@ -1,8 +1,8 @@
 import shanghaiSkylineUrl from '../assets/journey/shanghai/skyline.jpg'
 import shanghaiYuGardenUrl from '../assets/journey/shanghai/yu-garden.jpg'
 import shanghaiXiaolongbaoUrl from '../assets/journey/shanghai/xiaolongbao.jpg'
-import cupertinoAlpacaUrl from '../assets/journey/cupertino/alpaca.jpg'
 import cupertinoAppleParkUrl from '../assets/journey/cupertino/apple-park.jpg'
+import cupertinoDogUrl from '../assets/journey/cupertino/dog.webp'
 import cupertinoMatadorUrl from '../assets/journey/cupertino/matador.jpg'
 import newYorkAutumnAvenueUrl from '../assets/journey/new-york/autumn-avenue.jpg'
 import newYorkSharedMealUrl from '../assets/journey/new-york/shared-meal.jpg'
@@ -91,10 +91,10 @@ export const journeyEntries = [
         orientation: 'landscape',
       },
       {
-        id: 'cupertino-alpaca',
-        src: cupertinoAlpacaUrl,
-        alt: 'Painted illustration of a white alpaca at a farm',
-        orientation: 'landscape',
+        id: 'cupertino-dog',
+        src: cupertinoDogUrl,
+        alt: 'Hand-painted illustration of a small Yorkshire terrier resting with its paws forward',
+        orientation: 'square',
       },
     ],
   },

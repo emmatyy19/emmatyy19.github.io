@@ -89,6 +89,17 @@
   aspect-ratio: 1;
 }
 
+.imageFrame[data-image='cupertino-dog'] {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.imageFrame[data-image='cupertino-dog'] .image {
+  object-fit: contain;
+}
+
 .caption {
   margin-block-start: -0.2rem;
   justify-self: center;
