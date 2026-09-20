@@ -79,10 +79,12 @@
 .entry header {
   position: relative;
   z-index: 1;
+  display: grid;
+  gap: 0;
   width: fit-content;
   margin-block-end: -3.2rem;
   margin-inline: 11% auto;
-  padding: 0.55rem 1rem 0.5rem;
+  padding: 0.5rem 1rem 0.38rem;
   isolation: isolate;
   text-align: center;
   transform: rotate(-2deg);
@@ -134,7 +136,7 @@
 }
 
 .entry[data-city='shanghai'] header {
-  transform: translateY(1.85rem) rotate(-2deg);
+  transform: translateY(2.45rem) rotate(-2deg);
 }
 
 .entry[data-city='cupertino'] header {
@@ -171,7 +173,7 @@
 }
 
 .entry[data-city='new-york'] header {
-  margin-inline: auto 5%;
+  margin-inline: 4% auto;
   transform: rotate(-1.2deg);
 }
 
@@ -211,7 +213,7 @@
 }
 
 .entry header p {
-  margin-block-start: 0.1rem;
+  margin-block-start: -0.12rem;
   color: var(--color-ink-muted);
   font-family: var(--font-display);
   font-size: clamp(0.82rem, 1.2vw, 1rem);
