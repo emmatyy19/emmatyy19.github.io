@@ -14,9 +14,9 @@
 .heading {
   position: absolute;
   z-index: 4;
-  top: 1.15rem;
-  left: 0.65rem;
-  transform: rotate(-3.2deg);
+  top: -1.65rem;
+  left: 0.1rem;
+  transform: rotate(-5deg);
 }
 
 .boardLeaves {
@@ -73,7 +73,7 @@
 }
 
 .entry[data-city='new-york'] {
-  transform: translateY(-0.45rem);
+  transform: translateY(2.4rem);
 }
 
 .entry header {
@@ -209,11 +209,11 @@
   font-family: var(--font-display);
   font-size: clamp(1.05rem, 1.8vw, 1.35rem);
   font-weight: 400;
-  line-height: 1;
+  line-height: 0.9;
 }
 
 .entry header p {
-  margin-block-start: -0.12rem;
+  margin-block-start: -0.4rem;
   color: var(--color-ink-muted);
   font-family: var(--font-display);
   font-size: clamp(0.82rem, 1.2vw, 1rem);
@@ -226,8 +226,8 @@
   }
 
   .heading {
-    top: 1.25rem;
-    left: 0.35rem;
+    top: -1.45rem;
+    left: 0.1rem;
   }
 
   .boardLeaves {
