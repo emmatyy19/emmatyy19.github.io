@@ -133,6 +133,10 @@
   transform: translateX(-50%);
 }
 
+.entry[data-city='shanghai'] header {
+  transform: translateY(1.35rem) rotate(-2deg);
+}
+
 .entry[data-city='cupertino'] header {
   margin-inline: 29% auto;
   transform: rotate(1.4deg);

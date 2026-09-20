@@ -55,7 +55,6 @@ export function JourneyCollage({ entry }: JourneyCollageProps) {
                 />
               </div>
             ))}
-        <span aria-hidden="true" className={styles.wash} />
       </div>
       {entry.caption === undefined ? null : (
         <p className={styles.caption}>{entry.caption}</p>
