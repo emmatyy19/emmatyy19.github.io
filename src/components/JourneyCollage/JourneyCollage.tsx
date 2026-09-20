@@ -1,5 +1,4 @@
 import type { ImageAsset, JourneyEntry } from '../../types/content.ts'
-import maidenhairUrl from '../../assets/decor/pressed-maidenhair.webp'
 import { PhotoPlaceholder } from '../PhotoPlaceholder/PhotoPlaceholder.tsx'
 import styles from './JourneyCollage.module.css'
 
@@ -56,15 +55,6 @@ export function JourneyCollage({ entry }: JourneyCollageProps) {
                 />
               </div>
             ))}
-        {entry.id === 'cupertino' ? (
-          <img
-            alt=""
-            aria-hidden="true"
-            className={styles.leafAccent}
-            loading="lazy"
-            src={maidenhairUrl}
-          />
-        ) : null}
         <span aria-hidden="true" className={styles.wash} />
       </div>
       {entry.caption === undefined ? null : (
