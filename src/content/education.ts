@@ -6,7 +6,7 @@ export const educationEntries = [
     id: 'nyu',
     institution: 'NYU Stern',
     degree: 'B.S. in Business',
-    focus: 'Finance & Data Science · Minor in Computer Science',
+    focus: 'Finance & Data Science',
     detail: '2021',
     image: {
       src: nyuSketchUrl,

@@ -20,7 +20,7 @@
   display: grid;
   min-width: 0;
   gap: var(--space-3);
-  grid-template-rows: 2.25rem auto auto;
+  grid-template-rows: 3.25rem auto auto;
   text-align: center;
 }
 
@@ -117,8 +117,8 @@
 }
 
 .detail {
-  font-family: var(--font-display);
-  font-size: var(--text-annotation);
+  font-family: inherit;
+  font-size: inherit;
 }
 
 @media (max-width: 52rem) {
