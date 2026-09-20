@@ -1,5 +1,4 @@
 import ginkgoUrl from '../../assets/decor/pressed-ginkgo.webp'
-import libertyBridgeUrl from '../../assets/education/statue-liberty-bridge.png'
 import { SectionHeading } from '../../components/SectionHeading/SectionHeading.tsx'
 import { educationEntries } from '../../content/education.ts'
 import styles from './Education.module.css'
@@ -11,7 +10,7 @@ export function Education() {
         Education
       </SectionHeading>
       <div className={styles.path}>
-        {educationEntries.map((entry, index) => (
+        {educationEntries.map((entry) => (
           <div className={styles.step} key={entry.id}>
             <article className={styles.entry} data-school={entry.id}>
               <h3>{entry.institution}</h3>
@@ -38,11 +37,6 @@ export function Education() {
                 <p className={styles.detail}>{entry.detail}</p>
               </div>
             </article>
-            {index === 0 ? (
-              <figure aria-hidden="true" className={styles.bridge}>
-                <img alt="" loading="lazy" src={libertyBridgeUrl} />
-              </figure>
-            ) : null}
           </div>
         ))}
       </div>

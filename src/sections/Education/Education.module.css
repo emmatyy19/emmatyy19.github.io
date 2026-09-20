@@ -1,22 +1,17 @@
 .section {
   display: grid;
-  gap: var(--space-6);
+  gap: var(--space-4);
 }
 
 .path {
   display: grid;
-  align-items: center;
+  align-items: start;
+  gap: clamp(var(--space-5), 7vw, var(--space-8));
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
 .step {
-  display: grid;
-  align-items: center;
-  grid-template-columns: minmax(0, 1fr) auto;
-}
-
-.step:last-child {
-  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
 }
 
 .entry {
@@ -25,6 +20,7 @@
   display: grid;
   min-width: 0;
   gap: var(--space-3);
+  grid-template-rows: 2.25rem auto auto;
   text-align: center;
 }
 
@@ -39,7 +35,7 @@
   margin-inline: auto;
   color: var(--school-ink);
   font-family: var(--font-display);
-  font-size: var(--text-city);
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
   font-weight: 400;
   line-height: 1.1;
 }
@@ -125,22 +121,9 @@
   font-size: var(--text-annotation);
 }
 
-.bridge {
-  position: relative;
-  z-index: 1;
-  width: clamp(6rem, 10vw, 9rem);
-  margin: var(--space-5) calc(-1 * var(--space-5)) 0;
-}
-
-.bridge img {
-  display: block;
-  width: 100%;
-}
-
 @media (max-width: 52rem) {
   .path,
-  .step,
-  .step:last-child {
+  .step {
     grid-template-columns: 1fr;
   }
 
@@ -151,12 +134,6 @@
   .entry {
     width: min(100%, 34rem);
     justify-self: center;
-  }
-
-  .bridge {
-    width: 7rem;
-    margin: calc(-1 * var(--space-4)) auto;
-    transform: rotate(2deg);
   }
 
   .leafAccent {
