@@ -1,11 +1,11 @@
 import shanghaiSkylineUrl from '../assets/journey/shanghai/skyline.jpg'
 import shanghaiYuGardenUrl from '../assets/journey/shanghai/yu-garden.jpg'
-import shanghaiXiaolongbaoUrl from '../assets/journey/shanghai/xiaolongbao.jpg'
+import shanghaiXiaolongbaoUrl from '../assets/journey/shanghai/xiaolongbao-cutout.webp'
 import cupertinoAppleParkUrl from '../assets/journey/cupertino/apple-park.jpg'
 import cupertinoDogUrl from '../assets/journey/cupertino/dog.webp'
 import cupertinoMatadorUrl from '../assets/journey/cupertino/matador.jpg'
 import newYorkAutumnAvenueUrl from '../assets/journey/new-york/autumn-avenue.jpg'
-import newYorkSharedMealUrl from '../assets/journey/new-york/shared-meal.jpg'
+import newYorkSharedMealUrl from '../assets/journey/new-york/shared-meal-cutout.webp'
 import newYorkWashingtonSquareUrl from '../assets/journey/new-york/washington-square.jpg'
 import type { JourneyEntry } from '../types/content.ts'
 

@@ -89,14 +89,18 @@
   aspect-ratio: 1;
 }
 
-.imageFrame[data-image='cupertino-dog'] {
+.imageFrame[data-image='cupertino-dog'],
+.imageFrame[data-image='shanghai-xiaolongbao'],
+.imageFrame[data-image='new-york-shared-meal'] {
   padding: 0;
   border: 0;
   background: transparent;
   box-shadow: none;
 }
 
-.imageFrame[data-image='cupertino-dog'] .image {
+.imageFrame[data-image='cupertino-dog'] .image,
+.imageFrame[data-image='shanghai-xiaolongbao'] .image,
+.imageFrame[data-image='new-york-shared-meal'] .image {
   object-fit: contain;
 }
 
