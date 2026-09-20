@@ -1,6 +1,8 @@
 .binder {
   display: grid;
   min-width: 0;
+  width: min(100%, 41rem);
+  justify-self: end;
 }
 
 .tabs {
@@ -27,7 +29,8 @@
   transform: translateY(var(--space-1));
   transition:
     opacity var(--transition-quick),
-    transform var(--transition-quick);
+    transform var(--transition-quick),
+    box-shadow var(--transition-quick);
 }
 
 .tab[data-hobby='crochet'] {
@@ -41,8 +44,10 @@
 .tab[aria-selected='true'] {
   z-index: 1;
   margin-block-end: -1px;
+  box-shadow: 0 -0.25rem 0.55rem rgb(48 46 43 / 8%);
+  font-weight: 600;
   opacity: 1;
-  transform: none;
+  transform: translateY(-0.18rem);
 }
 
 .tab:focus-visible {
@@ -52,7 +57,7 @@
 
 .sheet {
   position: relative;
-  min-height: 18rem;
+  height: clamp(27rem, 38vw, 31rem);
   padding: clamp(var(--space-5), 4vw, var(--space-7));
   border: 1px solid var(--color-rule);
   border-radius: var(--radius-paper);
@@ -62,20 +67,66 @@
 
 .sheet::before {
   position: absolute;
-  z-index: 2;
-  top: 24%;
-  left: -0.72rem;
-  width: 1.35rem;
-  height: 0.34rem;
-  border: 2px solid #908a82;
+  top: 1.4rem;
+  bottom: 1.4rem;
+  left: 1.1rem;
+  width: 0.12rem;
   border-radius: 999px;
-  box-shadow:
-    0 4.25rem 0 -2px var(--color-paper-raised),
-    0 4.25rem 0 0 #908a82,
-    0 8.5rem 0 -2px var(--color-paper-raised),
-    0 8.5rem 0 0 #908a82;
+  background: linear-gradient(#ddd6ca, #f8f4ec 30%, #cbc3b7 72%, #f7f2e9);
+  box-shadow: 0.2rem 0 0.35rem rgb(48 46 43 / 8%);
   content: '';
-  transform: rotate(-3deg);
+}
+
+.rings {
+  position: absolute;
+  z-index: 4;
+  top: 17%;
+  bottom: 17%;
+  left: -1.05rem;
+  display: grid;
+  align-content: space-between;
+  pointer-events: none;
+}
+
+.ring {
+  position: relative;
+  display: block;
+  width: 2.35rem;
+  height: 1.15rem;
+  border: 0.2rem solid #8d8982;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    #dad7d1,
+    #89857f 46%,
+    #f3f0ea 54%,
+    #7d7973
+  );
+  box-shadow:
+    0 0.16rem 0.22rem rgb(48 46 43 / 20%),
+    inset 0 0 0 0.08rem rgb(255 255 255 / 52%);
+  transform: rotate(-5deg);
+}
+
+.ring::after {
+  position: absolute;
+  top: 50%;
+  right: -0.72rem;
+  width: 0.56rem;
+  height: 0.56rem;
+  border: 0.12rem solid #c8c0b4;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #746f68 0 29%,
+    #b8b0a5 31% 48%,
+    #ece5da 51%
+  );
+  box-shadow:
+    inset 0 0.1rem 0.15rem rgb(48 46 43 / 22%),
+    0.08rem 0.08rem 0.12rem rgb(48 46 43 / 12%);
+  content: '';
+  transform: translateY(-50%);
 }
 
 .sheet:focus-visible {
@@ -84,6 +135,10 @@
 }
 
 @media (max-width: 48rem) {
+  .binder {
+    width: 100%;
+  }
+
   .tabs {
     padding-inline-start: var(--space-3);
   }
@@ -91,5 +146,10 @@
   .tab {
     min-width: 0;
     flex: 1;
+  }
+
+  .sheet {
+    height: 40rem;
+    padding: var(--space-5);
   }
 }

@@ -97,6 +97,11 @@ export function BinderTabs() {
         id={`${activeGallery.id}-panel`}
         role="tabpanel"
       >
+        <span aria-hidden="true" className={styles.rings}>
+          <span className={styles.ring} />
+          <span className={styles.ring} />
+          <span className={styles.ring} />
+        </span>
         <HobbyGallery gallery={activeGallery} />
       </div>
     </div>
