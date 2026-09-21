@@ -1,6 +1,5 @@
 import { PhotoPlaceholder } from '../../components/PhotoPlaceholder/PhotoPlaceholder.tsx'
 import type { HobbyGallery as HobbyGalleryContent } from '../../types/content.ts'
-import oliveUrl from '../../assets/decor/pressed-olive.webp'
 import styles from './HobbyGallery.module.css'
 
 type HobbyGalleryProps = Readonly<{
@@ -42,15 +41,6 @@ export function HobbyGallery({ gallery }: HobbyGalleryProps) {
               />
             </div>
           ))}
-      {gallery.id === 'golf' ? (
-        <img
-          alt=""
-          aria-hidden="true"
-          className={styles.leafAccent}
-          loading="lazy"
-          src={oliveUrl}
-        />
-      ) : null}
     </div>
   )
 }

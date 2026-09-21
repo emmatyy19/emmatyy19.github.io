@@ -103,6 +103,7 @@
 @media (max-width: 48rem) {
   .hero {
     min-height: auto;
+    gap: 2.5rem;
     grid-template-columns: 1fr;
   }
 
@@ -112,19 +113,31 @@
   }
 
   .copy {
+    gap: var(--space-4);
     padding-inline-start: 0;
     transform: none;
   }
 
+  .copy > p {
+    font-size: clamp(1.45rem, 7.5vw, 1.65rem);
+    line-height: 1.42;
+  }
+
+  .links {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+
   .blushSprig {
-    top: -2.25rem;
-    left: -0.45rem;
-    width: 6.5rem;
+    top: -2.8rem;
+    left: 0.75rem;
+    width: 5rem;
     transform: rotate(-24deg);
   }
 
   .babysBreath {
-    right: 0;
+    right: 0.75rem;
     bottom: -1.35rem;
     width: 6.6rem;
   }

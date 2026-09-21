@@ -9,18 +9,6 @@
   animation: reveal var(--transition-quick) ease-out;
 }
 
-.leafAccent {
-  position: absolute;
-  z-index: 3;
-  top: 41%;
-  right: 27%;
-  width: 8.5rem;
-  opacity: 0.78;
-  pointer-events: none;
-  transform: rotate(-13deg);
-  user-select: none;
-}
-
 .item {
   height: 100%;
   min-width: 0;
@@ -160,12 +148,6 @@
   .gallery[data-hobby='crochet'] .item:nth-child(4) {
     width: 78%;
     justify-self: center;
-  }
-
-  .leafAccent {
-    top: 44%;
-    right: -0.4rem;
-    width: 6.3rem;
   }
 }
 
