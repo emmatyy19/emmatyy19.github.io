@@ -52,19 +52,13 @@
 
 .photo[data-paired='true'] .photoSequence {
   display: grid;
-  align-items: center;
-  gap: clamp(0.15rem, 0.5vw, 0.5rem);
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+  gap: clamp(0.3rem, 0.7vw, 0.65rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .photo[data-paired='true'] img {
   aspect-ratio: auto;
-}
-
-.sequenceMark {
-  color: var(--color-olive);
-  font-family: var(--font-display);
-  font-size: clamp(0.85rem, 1.5vw, 1.25rem);
 }
 
 .photo[data-variant='square'] img {
@@ -114,11 +108,11 @@
 }
 
 .gallery[data-hobby='crochet'] .item:nth-child(2) {
-  grid-column: 4 / 8;
+  grid-column: 4 / 7;
 }
 
 .gallery[data-hobby='crochet'] .item:nth-child(3) {
-  grid-column: 8 / 11;
+  grid-column: 7 / 11;
   transform: rotate(1.5deg);
 }
 
