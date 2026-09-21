@@ -10,7 +10,7 @@
   max-width: none;
   justify-self: center;
   pointer-events: none;
-  transform: translateY(0.65rem) rotate(3deg);
+  transform: translateY(0.65rem);
   user-select: none;
 }
 
@@ -39,6 +39,6 @@
     width: 15rem;
     margin-block-start: calc(-1 * var(--space-5));
     justify-self: end;
-    transform: rotate(4deg);
+    transform: none;
   }
 }
