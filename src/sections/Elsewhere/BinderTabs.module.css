@@ -74,7 +74,7 @@
   z-index: 4;
   top: 17%;
   bottom: 17%;
-  left: -0.72rem;
+  left: -0.82rem;
   display: grid;
   align-content: space-between;
   pointer-events: none;
@@ -83,32 +83,51 @@
 .ring {
   position: relative;
   display: block;
-  width: 1.7rem;
-  height: 0.58rem;
-  border: 0.13rem solid #85817a;
+  width: 1.9rem;
+  height: 0.68rem;
+  border: 0.08rem solid #77736d;
   border-radius: 50%;
-  background: transparent;
+  background: linear-gradient(
+    180deg,
+    #f1f0ed 0%,
+    #aaa7a1 34%,
+    #77736d 52%,
+    #d7d5d0 70%,
+    #f5f4f1 100%
+  );
   box-shadow:
-    0 0.08rem 0.12rem rgb(48 46 43 / 22%),
-    inset 0 0 0 0.04rem rgb(255 255 255 / 58%);
+    0 0.1rem 0.14rem rgb(48 46 43 / 24%),
+    inset 0 0.05rem 0.05rem rgb(255 255 255 / 68%);
   transform: rotate(-2deg);
+}
+
+.ring::before {
+  position: absolute;
+  inset: 0.16rem 0.24rem;
+  border-radius: 50%;
+  background: var(--color-paper-raised);
+  box-shadow: inset 0 0.05rem 0.08rem rgb(48 46 43 / 20%);
+  content: '';
 }
 
 .ring::after {
   position: absolute;
+  z-index: -1;
   top: 50%;
-  right: -0.14rem;
-  width: 0.38rem;
-  height: 0.3rem;
-  border: 0.08rem solid #b8b0a5;
+  right: -0.36rem;
+  width: 0.74rem;
+  height: 0.62rem;
+  border: 0.1rem solid #aaa196;
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    #77726b 0 34%,
-    #c5bdb1 37% 55%,
-    #f1ece4 58%
+    #514d48 0 39%,
+    #aaa297 42% 59%,
+    #eee8de 62%
   );
-  box-shadow: inset 0 0.06rem 0.1rem rgb(48 46 43 / 18%);
+  box-shadow:
+    inset 0 0.08rem 0.12rem rgb(48 46 43 / 28%),
+    0 0.04rem 0.08rem rgb(48 46 43 / 12%);
   content: '';
   transform: translateY(-50%);
 }
