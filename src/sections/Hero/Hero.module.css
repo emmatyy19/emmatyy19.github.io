@@ -130,10 +130,11 @@
   }
 
   .blushSprig {
-    top: -2.8rem;
+    z-index: 2;
+    top: -2.3rem;
     left: 0.75rem;
-    width: 5rem;
-    transform: rotate(-24deg);
+    width: 5.75rem;
+    transform: rotate(-18deg);
   }
 
   .babysBreath {

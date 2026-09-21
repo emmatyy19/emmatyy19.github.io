@@ -168,7 +168,7 @@
 
 @media (max-width: 52rem) {
   .stage {
-    min-height: clamp(18rem, 80vw, 22rem);
+    min-height: clamp(18rem, calc(68vw + 4rem), 24.5rem);
   }
 
   .primary,
@@ -202,5 +202,11 @@
 
   .supporting[data-position='2'] {
     display: none;
+  }
+
+  .caption {
+    margin-block-start: var(--space-2);
+    padding-inline: var(--space-2);
+    line-height: 1.35;
   }
 }
