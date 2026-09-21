@@ -10,6 +10,7 @@
   display: grid;
   gap: var(--space-5);
   padding-inline-start: clamp(var(--space-4), 5vw, 5rem);
+  transform: translateY(1.25rem);
 }
 
 .copy > p {
@@ -112,6 +113,7 @@
 
   .copy {
     padding-inline-start: 0;
+    transform: none;
   }
 
   .blushSprig {
