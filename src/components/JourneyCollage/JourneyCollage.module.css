@@ -201,7 +201,30 @@
   }
 
   .supporting[data-position='2'] {
-    display: none;
+    z-index: 3;
+    top: 3.75rem;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    display: block;
+    width: 28%;
+    transform: rotate(3deg);
+  }
+
+  .composition[data-city='cupertino'] .supporting[data-position='2'] {
+    top: 3.65rem;
+    right: auto;
+    left: 0;
+    width: 27%;
+    transform: rotate(-3deg);
+  }
+
+  .composition[data-city='new-york'] .supporting[data-position='2'] {
+    top: 3.6rem;
+    right: 0;
+    left: auto;
+    width: 29%;
+    transform: rotate(2.5deg);
   }
 
   .caption {
