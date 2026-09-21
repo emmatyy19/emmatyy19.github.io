@@ -26,7 +26,7 @@
 
 .backdrop {
   position: fixed;
-  z-index: 20;
+  z-index: 1000;
   display: grid;
   padding: clamp(var(--space-3), 4vw, var(--space-7));
   background: color-mix(in srgb, var(--color-ink) 42%, transparent);

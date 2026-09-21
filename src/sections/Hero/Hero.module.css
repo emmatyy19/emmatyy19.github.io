@@ -76,11 +76,11 @@
 }
 
 .blushSprig {
-  top: -5.35rem;
-  left: -11.25rem;
-  width: 9.4rem;
+  top: -2.4rem;
+  left: -11.8rem;
+  width: 8.6rem;
   opacity: 0.88;
-  transform: rotate(-24deg);
+  transform: rotate(70deg);
 }
 
 .babysBreath {
@@ -120,6 +120,7 @@
     top: -2.25rem;
     left: -0.45rem;
     width: 6.5rem;
+    transform: rotate(-24deg);
   }
 
   .babysBreath {

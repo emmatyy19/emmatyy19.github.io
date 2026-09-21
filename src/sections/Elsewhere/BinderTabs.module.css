@@ -2,6 +2,7 @@
   display: grid;
   min-width: 0;
   width: min(100%, 41rem);
+  margin-block-start: clamp(4.25rem, 6vw, 5rem);
   justify-self: end;
 }
 
@@ -140,6 +141,7 @@
 @media (max-width: 48rem) {
   .binder {
     width: 100%;
+    margin-block-start: 0;
   }
 
   .tabs {

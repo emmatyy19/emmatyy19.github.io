@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { HiOutlineDocumentText, HiOutlineXMark } from 'react-icons/hi2'
 import resumePreviewUrl from '../../assets/resume/emma-resume-preview.webp'
 import type { ProfessionalLink } from '../../types/content.ts'
@@ -50,56 +51,59 @@ export function ResumePreview({ link }: ResumePreviewProps) {
         {link.label}
       </button>
 
-      {isOpen ? (
-        <div
-          aria-label="Resume"
-          aria-modal="true"
-          className={styles.backdrop}
-          role="dialog"
-        >
-          <button
-            aria-label="Dismiss resume preview"
-            className={styles.backdropClose}
-            onClick={() => {
-              setIsOpen(false)
-            }}
-            tabIndex={-1}
-            type="button"
-          />
-          <section className={styles.dialog}>
-            <header className={styles.header}>
+      {isOpen
+        ? createPortal(
+            <div
+              aria-label="Resume"
+              aria-modal="true"
+              className={styles.backdrop}
+              role="dialog"
+            >
               <button
-                aria-label="Close resume preview"
-                className={styles.closeButton}
+                aria-label="Dismiss resume preview"
+                className={styles.backdropClose}
                 onClick={() => {
                   setIsOpen(false)
                 }}
-                ref={closeButtonRef}
+                tabIndex={-1}
                 type="button"
-              >
-                <HiOutlineXMark aria-hidden="true" />
-              </button>
-            </header>
-
-            <div className={styles.documentViewport}>
-              <img
-                alt="Preview of Emma's resume"
-                className={styles.document}
-                src={resumePreviewUrl}
               />
-            </div>
+              <section className={styles.dialog}>
+                <header className={styles.header}>
+                  <button
+                    aria-label="Close resume preview"
+                    className={styles.closeButton}
+                    onClick={() => {
+                      setIsOpen(false)
+                    }}
+                    ref={closeButtonRef}
+                    type="button"
+                  >
+                    <HiOutlineXMark aria-hidden="true" />
+                  </button>
+                </header>
 
-            <footer className={styles.actions}>
-              <a href={link.href} rel="noopener noreferrer" target="_blank">
-                Open in new tab
-              </a>
-              <a download={link.download} href={link.href}>
-                Download
-              </a>
-            </footer>
-          </section>
-        </div>
-      ) : null}
+                <div className={styles.documentViewport}>
+                  <img
+                    alt="Preview of Emma's resume"
+                    className={styles.document}
+                    src={resumePreviewUrl}
+                  />
+                </div>
+
+                <footer className={styles.actions}>
+                  <a href={link.href} rel="noopener noreferrer" target="_blank">
+                    Open in new tab
+                  </a>
+                  <a download={link.download} href={link.href}>
+                    Download
+                  </a>
+                </footer>
+              </section>
+            </div>,
+            document.body,
+          )
+        : null}
     </>
   )
 }
