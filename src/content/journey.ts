@@ -1,11 +1,11 @@
 import shanghaiSkylineUrl from '../assets/journey/shanghai/skyline.jpg'
-import shanghaiYuGardenUrl from '../assets/journey/shanghai/yu-garden.jpg'
-import shanghaiXiaolongbaoUrl from '../assets/journey/shanghai/xiaolongbao.jpg'
-import cupertinoAlpacaUrl from '../assets/journey/cupertino/alpaca.jpg'
+import shanghaiResidenceUrl from '../assets/journey/shanghai/historic-residence.webp'
+import shanghaiXiaolongbaoUrl from '../assets/journey/shanghai/xiaolongbao-cutout.webp'
 import cupertinoAppleParkUrl from '../assets/journey/cupertino/apple-park.jpg'
+import cupertinoDogUrl from '../assets/journey/cupertino/dog.webp'
 import cupertinoMatadorUrl from '../assets/journey/cupertino/matador.jpg'
 import newYorkAutumnAvenueUrl from '../assets/journey/new-york/autumn-avenue.jpg'
-import newYorkSharedMealUrl from '../assets/journey/new-york/shared-meal.jpg'
+import newYorkSharedMealUrl from '../assets/journey/new-york/shared-meal-cutout.webp'
 import newYorkWashingtonSquareUrl from '../assets/journey/new-york/washington-square.jpg'
 import type { JourneyEntry } from '../types/content.ts'
 
@@ -41,9 +41,9 @@ export const journeyEntries = [
     ],
     supportingImages: [
       {
-        id: 'shanghai-yu-garden',
-        src: shanghaiYuGardenUrl,
-        alt: 'Painted aerial illustration of Yu Garden in Shanghai',
+        id: 'shanghai-historic-residence',
+        src: shanghaiResidenceUrl,
+        alt: 'Painted illustration of a historic Shanghai residence framed by trees',
         orientation: 'landscape',
       },
       {
@@ -91,10 +91,10 @@ export const journeyEntries = [
         orientation: 'landscape',
       },
       {
-        id: 'cupertino-alpaca',
-        src: cupertinoAlpacaUrl,
-        alt: 'Painted illustration of a white alpaca at a farm',
-        orientation: 'landscape',
+        id: 'cupertino-dog',
+        src: cupertinoDogUrl,
+        alt: 'Hand-painted illustration of a small Yorkshire terrier resting with its paws forward',
+        orientation: 'square',
       },
     ],
   },

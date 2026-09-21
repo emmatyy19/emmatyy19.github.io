@@ -1,6 +1,9 @@
 .binder {
   display: grid;
   min-width: 0;
+  width: min(100%, 41rem);
+  margin-block-start: clamp(4.25rem, 6vw, 5rem);
+  justify-self: end;
 }
 
 .tabs {
@@ -27,7 +30,8 @@
   transform: translateY(var(--space-1));
   transition:
     opacity var(--transition-quick),
-    transform var(--transition-quick);
+    transform var(--transition-quick),
+    box-shadow var(--transition-quick);
 }
 
 .tab[data-hobby='crochet'] {
@@ -41,8 +45,10 @@
 .tab[aria-selected='true'] {
   z-index: 1;
   margin-block-end: -1px;
+  box-shadow: 0 -0.25rem 0.55rem rgb(48 46 43 / 8%);
+  font-weight: 600;
   opacity: 1;
-  transform: none;
+  transform: translateY(-0.18rem);
 }
 
 .tab:focus-visible {
@@ -51,12 +57,80 @@
 }
 
 .sheet {
-  min-height: 18rem;
+  position: relative;
+  height: clamp(27rem, 38vw, 31rem);
   padding: clamp(var(--space-5), 4vw, var(--space-7));
   border: 1px solid var(--color-rule);
   border-radius: var(--radius-paper);
   background: var(--color-paper-raised);
   box-shadow: var(--shadow-paper);
+}
+
+.sheet::before {
+  content: none;
+}
+
+.rings {
+  position: absolute;
+  z-index: 4;
+  top: 17%;
+  bottom: 17%;
+  left: -0.82rem;
+  display: grid;
+  align-content: space-between;
+  pointer-events: none;
+}
+
+.ring {
+  position: relative;
+  display: block;
+  width: 1.9rem;
+  height: 0.68rem;
+  border: 0.08rem solid #77736d;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    #f1f0ed 0%,
+    #aaa7a1 34%,
+    #77736d 52%,
+    #d7d5d0 70%,
+    #f5f4f1 100%
+  );
+  box-shadow:
+    0 0.1rem 0.14rem rgb(48 46 43 / 24%),
+    inset 0 0.05rem 0.05rem rgb(255 255 255 / 68%);
+  transform: rotate(-2deg);
+}
+
+.ring::before {
+  position: absolute;
+  inset: 0.16rem 0.24rem;
+  border-radius: 50%;
+  background: var(--color-paper-raised);
+  box-shadow: inset 0 0.05rem 0.08rem rgb(48 46 43 / 20%);
+  content: '';
+}
+
+.ring::after {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: -0.36rem;
+  width: 0.74rem;
+  height: 0.62rem;
+  border: 0.1rem solid #aaa196;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #514d48 0 39%,
+    #aaa297 42% 59%,
+    #eee8de 62%
+  );
+  box-shadow:
+    inset 0 0.08rem 0.12rem rgb(48 46 43 / 28%),
+    0 0.04rem 0.08rem rgb(48 46 43 / 12%);
+  content: '';
+  transform: translateY(-50%);
 }
 
 .sheet:focus-visible {
@@ -65,6 +139,11 @@
 }
 
 @media (max-width: 48rem) {
+  .binder {
+    width: 100%;
+    margin-block-start: 0;
+  }
+
   .tabs {
     padding-inline-start: var(--space-3);
   }
@@ -72,5 +151,10 @@
   .tab {
     min-width: 0;
     flex: 1;
+  }
+
+  .sheet {
+    height: 40rem;
+    padding: var(--space-5);
   }
 }

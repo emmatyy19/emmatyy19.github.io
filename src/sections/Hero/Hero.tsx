@@ -2,6 +2,8 @@ import { ExternalLink } from '../../components/ExternalLink/ExternalLink.tsx'
 import { ResumePreview } from '../../components/ResumePreview/ResumePreview.tsx'
 import { professionalLinks } from '../../content/links.ts'
 import { site } from '../../content/site.ts'
+import babysBreathUrl from '../../assets/decor/pressed-babys-breath.webp'
+import blushSprigUrl from '../../assets/decor/pressed-blush-sprig.webp'
 import portraitUrl from '../../assets/hero/emma-portrait.jpg'
 import styles from './Hero.module.css'
 
@@ -23,6 +25,18 @@ export function Hero() {
         </nav>
       </div>
       <div className={styles.portrait}>
+        <img
+          alt=""
+          aria-hidden="true"
+          className={[styles.botanical, styles.blushSprig].join(' ')}
+          src={blushSprigUrl}
+        />
+        <img
+          alt=""
+          aria-hidden="true"
+          className={[styles.botanical, styles.babysBreath].join(' ')}
+          src={babysBreathUrl}
+        />
         <span aria-hidden="true" className={styles.tape} />
         <figure className={styles.photoFrame}>
           <img

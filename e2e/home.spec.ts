@@ -34,13 +34,18 @@ test('homepage loads', async ({ page }) => {
 })
 
 test('mobile layout does not overflow horizontally', async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 844 })
-  await page.goto('/')
+  for (const width of [320, 390]) {
+    await page.setViewportSize({ width, height: 844 })
+    await page.goto('/')
+    await page.evaluate(() => document.fonts.ready)
 
-  const dimensions = await page.evaluate(() => ({
-    documentWidth: document.documentElement.scrollWidth,
-    viewportWidth: document.documentElement.clientWidth,
-  }))
+    const dimensions = await page.evaluate(() => ({
+      documentWidth: document.documentElement.scrollWidth,
+      viewportWidth: document.documentElement.clientWidth,
+    }))
 
-  expect(dimensions.documentWidth).toBeLessThanOrEqual(dimensions.viewportWidth)
+    expect(dimensions.documentWidth).toBeLessThanOrEqual(
+      dimensions.viewportWidth,
+    )
+  }
 })

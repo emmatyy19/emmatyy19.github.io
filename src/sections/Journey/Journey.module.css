@@ -1,7 +1,7 @@
 .section {
-  display: grid;
-  gap: var(--space-7);
-  padding-block: var(--space-7);
+  position: relative;
+  padding-block: var(--space-5) var(--space-7);
+  isolation: isolate;
   background: linear-gradient(
     90deg,
     transparent,
@@ -11,71 +11,249 @@
   );
 }
 
+.heading {
+  position: absolute;
+  z-index: 4;
+  top: -1.65rem;
+  left: 0.1rem;
+  transform: rotate(-5deg);
+}
+
+.boardLeaves {
+  position: absolute;
+  z-index: 2;
+  top: -1.2rem;
+  left: 22%;
+  width: 7.5rem;
+  opacity: 0.72;
+  pointer-events: none;
+  transform: rotate(-71deg);
+  user-select: none;
+}
+
+.section::before {
+  position: absolute;
+  z-index: -1;
+  background-image: url('../../assets/textures/bulletin-board.webp');
+  background-position: center;
+  background-size: 34rem 34rem;
+  content: '';
+  inset: 0 calc(-1 * var(--space-4));
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+  opacity: 0.42;
+}
+
 .timeline {
   display: grid;
-  gap: var(--space-4);
+  gap: clamp(0.15rem, 0.7vw, 0.6rem);
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .step {
-  display: grid;
-  align-items: center;
-  gap: var(--space-4);
-  grid-template-columns: minmax(0, 1fr) auto;
-}
-
-.step:last-child {
-  grid-template-columns: 1fr;
+  min-width: 0;
 }
 
 .entry {
   display: grid;
-  gap: var(--space-2);
+  gap: 0;
+}
+
+.entry[data-city='shanghai'] {
+  transform: translateY(3rem);
+}
+
+.entry[data-city='cupertino'] {
+  transform: translateY(0.1rem);
+}
+
+.entry[data-city='new-york'] {
+  transform: translateY(2.4rem);
 }
 
 .entry header {
   position: relative;
   z-index: 1;
+  display: grid;
+  gap: 0;
   width: fit-content;
-  margin-block-end: calc(-1 * var(--space-8));
-  margin-inline: auto;
-  padding: var(--space-3) var(--space-5);
-  background: var(--color-paper-raised);
-  box-shadow: var(--shadow-paper);
+  margin-block-end: -3.2rem;
+  margin-inline: 11% auto;
+  padding: 0.5rem 1rem 0.38rem;
+  isolation: isolate;
   text-align: center;
-  transform: rotate(-1deg);
+  transform: rotate(-2deg);
+}
+
+.entry header::after {
+  position: absolute;
+  z-index: -1;
+  background-color: #fffaf0;
+  background-image: url('../../assets/textures/handmade-paper.webp');
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(
+    2% 5%,
+    18% 2%,
+    34% 5%,
+    53% 1%,
+    71% 4%,
+    97% 2%,
+    99% 22%,
+    96% 43%,
+    100% 66%,
+    97% 96%,
+    76% 98%,
+    58% 95%,
+    39% 100%,
+    21% 96%,
+    1% 98%,
+    3% 72%,
+    0 48%,
+    3% 27%
+  );
+  content: '';
+  filter: drop-shadow(0 0.14rem 0.2rem rgb(48 46 43 / 11%));
+  inset: 0;
+}
+
+.entry header::before {
+  position: absolute;
+  top: 0.18rem;
+  left: 72%;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: #bb7167;
+  box-shadow: 0 0.12rem 0.2rem rgb(48 46 43 / 24%);
+  content: '';
+  transform: translateX(-50%);
+}
+
+.entry[data-city='shanghai'] header {
+  transform: translateY(2.45rem) rotate(-2deg);
 }
 
 .entry[data-city='cupertino'] header {
-  transform: rotate(1deg);
+  margin-inline: 29% auto;
+  transform: rotate(1.4deg);
+}
+
+.entry[data-city='cupertino'] header::after {
+  clip-path: polygon(
+    1% 3%,
+    23% 5%,
+    42% 1%,
+    63% 4%,
+    82% 0,
+    98% 5%,
+    96% 26%,
+    100% 49%,
+    97% 74%,
+    99% 97%,
+    78% 95%,
+    62% 99%,
+    44% 96%,
+    25% 100%,
+    2% 96%,
+    4% 75%,
+    0 54%,
+    3% 29%
+  );
+}
+
+.entry[data-city='cupertino'] header::before {
+  left: 24%;
+  background: #a9665e;
+}
+
+.entry[data-city='new-york'] header {
+  margin-inline: 4% auto;
+  transform: rotate(-1.2deg);
+}
+
+.entry[data-city='new-york'] header::after {
+  clip-path: polygon(
+    3% 1%,
+    20% 4%,
+    38% 2%,
+    56% 5%,
+    75% 1%,
+    98% 4%,
+    96% 23%,
+    100% 44%,
+    97% 63%,
+    99% 95%,
+    81% 99%,
+    64% 96%,
+    47% 100%,
+    28% 95%,
+    1% 98%,
+    4% 79%,
+    0 58%,
+    2% 31%
+  );
+}
+
+.entry[data-city='new-york'] header::before {
+  left: 61%;
+  background: #c47c6f;
 }
 
 .entry h3 {
   font-family: var(--font-display);
-  font-size: var(--text-city);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
   font-weight: 400;
-  line-height: 1;
+  line-height: 0.9;
 }
 
 .entry header p {
-  margin-block-start: var(--space-1);
+  margin-block-start: -0.4rem;
   color: var(--color-ink-muted);
-  font-size: var(--text-small);
+  font-family: var(--font-display);
+  font-size: clamp(0.82rem, 1.2vw, 1rem);
+  line-height: 1;
 }
 
 @media (max-width: 52rem) {
+  .section {
+    padding-block-start: var(--space-5);
+  }
+
+  .heading {
+    top: -1.45rem;
+    left: 0.1rem;
+  }
+
+  .boardLeaves {
+    top: 0.2rem;
+    right: 0.25rem;
+    left: auto;
+    width: 5.8rem;
+    opacity: 0.65;
+    transform: rotate(-24deg);
+  }
+
   .timeline {
+    gap: var(--space-3);
     grid-template-columns: 1fr;
+    padding-block-start: 4.2rem;
   }
 
   .step,
   .step:last-child {
-    width: min(100%, 28rem);
-    grid-template-columns: 1fr;
+    width: min(100%, 30rem);
     justify-self: center;
   }
 
-  .step > svg {
-    justify-self: center;
+  .entry[data-city='shanghai'],
+  .entry[data-city='cupertino'],
+  .entry[data-city='new-york'] {
+    transform: none;
   }
 }

@@ -1,11 +1,23 @@
 .header {
-  padding-block: clamp(var(--space-7), 7vw, var(--space-9)) var(--space-7);
+  padding-block: clamp(var(--space-5), 5vw, var(--space-7)) var(--space-5);
 }
 
 .header h1 {
-  font-family: var(--font-display);
-  font-size: var(--text-site-name);
+  font-family: 'Oooh Baby', 'Segoe Script', cursive;
+  font-size: clamp(4.25rem, 7vw, 5.7rem);
   font-weight: 400;
-  letter-spacing: -0.035em;
-  line-height: 1;
+  letter-spacing: 0.01em;
+  line-height: 0.9;
+}
+
+@media (max-width: 48rem) {
+  .header {
+    padding-block: var(--space-5) var(--space-4);
+  }
+
+  .header h1 {
+    font-size: clamp(3.25rem, 16.5vw, 4rem);
+    line-height: 0.95;
+    white-space: nowrap;
+  }
 }

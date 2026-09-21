@@ -23,16 +23,11 @@ export function HobbyGallery({ gallery }: HobbyGalleryProps) {
                 <div className={styles.photoSequence}>
                   <img alt={image.alt} loading="lazy" src={image.src} />
                   {image.secondary ? (
-                    <>
-                      <span aria-hidden="true" className={styles.sequenceMark}>
-                        →
-                      </span>
-                      <img
-                        alt={image.secondary.alt}
-                        loading="lazy"
-                        src={image.secondary.src}
-                      />
-                    </>
+                    <img
+                      alt={image.secondary.alt}
+                      loading="lazy"
+                      src={image.secondary.src}
+                    />
                   ) : null}
                 </div>
               </figure>

@@ -61,18 +61,6 @@ export const hobbyGalleries = [
     label: 'Crochet',
     images: [
       {
-        id: 'wreath-ornament',
-        src: wreathOrnamentUrl,
-        alt: 'A crocheted red and green wreath ornament with a bow',
-        orientation: 'portrait',
-      },
-      {
-        id: 'banana-cat',
-        src: bananaCatUrl,
-        alt: 'A small crocheted cat hugging a banana',
-        orientation: 'landscape',
-      },
-      {
         id: 'tulip-bouquet',
         src: tulipMatUrl,
         alt: 'A flat crocheted circle edged with purple tulips',
@@ -91,6 +79,18 @@ export const hobbyGalleries = [
           alt: 'Reverse view of the same crocheted fried-egg key cover',
         },
         orientation: 'landscape',
+      },
+      {
+        id: 'banana-cat',
+        src: bananaCatUrl,
+        alt: 'A small crocheted cat hugging a banana',
+        orientation: 'landscape',
+      },
+      {
+        id: 'wreath-ornament',
+        src: wreathOrnamentUrl,
+        alt: 'A crocheted red and green wreath ornament with a bow',
+        orientation: 'portrait',
       },
       {
         id: 'lion-plush',
