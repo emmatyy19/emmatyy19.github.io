@@ -9,6 +9,7 @@
 .copy {
   display: grid;
   gap: var(--space-5);
+  padding-inline-start: clamp(var(--space-4), 5vw, 5rem);
 }
 
 .copy > p {
@@ -107,6 +108,10 @@
   .portrait {
     width: min(100%, 20rem);
     justify-self: center;
+  }
+
+  .copy {
+    padding-inline-start: 0;
   }
 
   .blushSprig {
