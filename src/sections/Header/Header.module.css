@@ -3,9 +3,9 @@
 }
 
 .header h1 {
-  font-family: var(--font-display);
+  font-family: 'La Belle Aurore', 'Segoe Script', cursive;
   font-size: var(--text-site-name);
   font-weight: 400;
-  letter-spacing: -0.035em;
-  line-height: 1;
+  letter-spacing: 0.01em;
+  line-height: 0.9;
 }

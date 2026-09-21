@@ -30,7 +30,7 @@
   --shadow-photo: 0 4px 14px rgb(47 43 38 / 8%);
   --font-display: 'Kalam', 'Segoe Print', cursive;
   --font-body: 'Inter', Arial, sans-serif;
-  --text-site-name: clamp(2.1rem, 5vw, 2.6rem);
+  --text-site-name: clamp(3.35rem, 6vw, 4.5rem);
   --text-intro: clamp(1.65rem, 3.2vw, 2.15rem);
   --text-section-heading: clamp(2.3rem, 5vw, 3rem);
   --text-city: clamp(1.45rem, 2.7vw, 1.85rem);
