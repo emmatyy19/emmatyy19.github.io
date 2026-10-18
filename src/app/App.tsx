@@ -5,6 +5,7 @@ import { Footer } from '../sections/Footer/Footer.tsx'
 import { Header } from '../sections/Header/Header.tsx'
 import { Hero } from '../sections/Hero/Hero.tsx'
 import { Journey } from '../sections/Journey/Journey.tsx'
+import { Projects } from '../sections/Projects/Projects.tsx'
 import styles from './App.module.css'
 
 export function App() {
@@ -16,6 +17,7 @@ export function App() {
         <About />
         <Journey />
         <Education />
+        <Projects />
         <Elsewhere />
       </main>
       <Footer />
